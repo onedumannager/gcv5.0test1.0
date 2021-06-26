@@ -42,9 +42,9 @@ if (Config.WORKTYPE == 'private') {
             }
         );
         
-        await message.client.sendMessage(
-            message.jid, CMD_HELP, MessageType.text ,{quoted: message.data}
-        );    
+             await message.client.sendMessage(
+                message.jid,'╔════════════════════╗\n  ✥▬▬ *'+Config.MENUTEXT+'* ▬▬✥\n\n' + CMD_HELP, MessageType.text
+            );    
     } else {
         var CMD_HELP = '';
         Asena.commands.map(
