@@ -265,7 +265,7 @@ async function whatsAsena () {
     var insult = await axios.get('https://gist.githubusercontent.com/SLdevilX/39aba2b41c6d4851880c35ac5a25ec7b/raw/')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
-    var StrSes_Db = await whatsasenaDB.findAll({
+    var StrSes_Db = await WhatsAsenaDB.findAll({
         where: {
           info: 'StringSession'
         }
