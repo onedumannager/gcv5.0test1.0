@@ -1,9 +1,5 @@
 /* Copyright (C) 2020 Yusuf Usta.
 
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
 */
 
 const { Sequelize } = require('sequelize');
@@ -19,12 +15,12 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './whatsasena.db' : proc
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: 'v1.3.2 Global Stable',
-    CHANNEL: 'https://t.me/remasterplugin',
+    VERSION: 'v1.3.8 Stable',
+    CHANNEL: 'https://t.me/danumabots',
     SESSION: process.env.ASENA_SESSION === undefined ? '' : process.env.ASENA_SESSION,
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
     AUTOBİO: process.env.AUTO_BİO === undefined ? 'false' : process.env.AUTO_BİO,
-    GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
+    GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://telegra.ph/file/b11ff90ad6a02293fefaf.jpg' : process.env.GAN_IMAGE,
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
@@ -57,7 +53,5 @@ module.exports = {
     DEBUG: DEBUG,
     COFFEEHOUSE_API_KEY: process.env.COFFEEHOUSE_API_KEY === undefined ? false : process.env.COFFEEHOUSE_API_KEY,
     WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG",
-    SUPPORT: "905524317852-1612300121",
-    SUPPORT2: "905511384572-1617736751",
-    SUPPORT3: "905511384572-1621015274"
+
 };
