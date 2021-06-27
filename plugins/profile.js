@@ -130,7 +130,7 @@ Asena.addCommand({pattern: 'unblock ?(.*)', fromMe: true, desc: Lang.UNBLOCK_DES
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'jid ?(.*)', fromMe: true, desc: Lang.JID_DESC}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'id ?(.*)', fromMe: true, desc: Lang.JID_DESC}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, Lang.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -148,7 +148,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'jid ?(.*)', fromMe: false, desc: Lang.JID_DESC}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'id ?(.*)', fromMe: false, desc: Lang.JID_DESC}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, Lang.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -163,7 +163,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid, Lang.JID_CHAT.format(message.jid), MessageType.text);
         }
     }));
-    Asena.addCommand({pattern: 'jid ?(.*)', fromMe: true, desc: Lang.JID_DESC}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'id ?(.*)', fromMe: true, desc: Lang.JID_DESC}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, Lang.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
