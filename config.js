@@ -39,6 +39,7 @@ module.exports = {
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.!;]' : process.env.HANDLERS,
     MENUTEXT: process.env.MENU === undefined ?'😎 Pro Menu ⚜' : process.env.MENU,
+    CAPTION_KEY: process.env.CP === undefined ?'⚜ X-Troid Pro ⚜' : process.env.CP,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
     HEROKU: {
