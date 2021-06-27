@@ -17,8 +17,15 @@ if (Config.WORKTYPE == 'private') {
     Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
         
         let pp
-        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: "»»————　♔　———-««",Config.ALIVEMSG }); });
+        try {
+             pp = await message.client.getProfilePicture(
+                message.jid.includes('-') ? message.data.participant : message.jid ); } 
+             
+             catch { pp = await message.client.getProfilePicture(); }
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) =>
+         { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: "\n»»————　♔　———-««\n" + Config.ALIVEMSG });
+    
+    });
     }));
 
 }
@@ -27,8 +34,17 @@ else if (Config.WORKTYPE == 'public') {
    Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
         
         let pp
-        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: "»»————　♔　———-««",Config.ALIVEMSG }); });
+
+        try {
+             pp = await message.client.getProfilePicture(
+                 message.jid.includes('-') ? message.data.participant : message.jid ); } 
+                 
+                 catch {
+                      pp = await message.client.getProfilePicture(); }
+
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) =>
+         { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: "\n»»————　♔　———-««\n" + Config.ALIVEMSG });
+         });
     }));
  
 }
