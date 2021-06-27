@@ -10,6 +10,7 @@ const chalk = require('chalk');
 const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
+const LP = Language.getString('profile');
 const LW = Language.getString('whois'); 
 const I_PACK ="⊱⊱————-　⚜　————-⊰⊰\n   Infomation Pack\n\n┏━━━━━Cmd━━━━━━\n┃\n┣ *.sysd*\n┃⊷️「sys info」\n┃\n┣ *.info*\n┃⊷️「basic info」\n┃\n┣ *.inf*\n┃⊷️「advance info」\n┃\n┣ *.id*\n┃⊷️「user id」\n┃\n┗━━━━━━━"
 const I_DESC = "Get infomations with smart bot"
@@ -149,19 +150,19 @@ if (Config.WORKTYPE == 'private') {
         }
     });
 
-    Asena.addCommand({pattern: 'id ?(.*)', fromMe: true, desc: Lang.JID_DESC, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message !== false) {
-            await message.client.sendMessage(message.jid, Lang.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
+            await message.client.sendMessage(message.jid, LP.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
             });
         } else if (message.mention !== false) {
             message.mention.map(async user => {
-                await message.client.sendMessage(message.jid, Lang.JID.format(user.split('@')[0], user), MessageType.text, {
+                await message.client.sendMessage(message.jid, LP.JID.format(user.split('@')[0], user), MessageType.text, {
                     contextInfo: {mentionedJid: [user.replace('c.us', 's.whatsapp.net')]}
                 });    
             });
         } else {
-            await message.client.sendMessage(message.jid, Lang.JID_CHAT.format(message.jid), MessageType.text);
+            await message.client.sendMessage(message.jid, LP.JID_CHAT.format(message.jid), MessageType.text);
         }
     }));
 
@@ -338,19 +339,19 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid, Lang.JID_CHAT.format(message.jid), MessageType.text);
         }
     }));
-    Asena.addCommand({pattern: 'id ?(.*)', fromMe: true, desc: Lang.JID_DESC , dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'id ?(.*)', fromMe: true, desc: LP.JID_DESC , dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message !== false) {
-            await message.client.sendMessage(message.jid, Lang.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
+            await message.client.sendMessage(message.jid, LP.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
             });
         } else if (message.mention !== false) {
             message.mention.map(async user => {
-                await message.client.sendMessage(message.jid, Lang.JID.format(user.split('@')[0], user), MessageType.text, {
+                await message.client.sendMessage(message.jid, LP.JID.format(user.split('@')[0], user), MessageType.text, {
                     contextInfo: {mentionedJid: [user.replace('c.us', 's.whatsapp.net')]}
                 });    
             });
         } else {
-            await message.client.sendMessage(message.jid, Lang.JID_CHAT.format(message.jid), MessageType.text);
+            await message.client.sendMessage(message.jid, LP.JID_CHAT.format(message.jid), MessageType.text);
         }
     }));
 
