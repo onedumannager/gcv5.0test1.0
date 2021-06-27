@@ -17,7 +17,7 @@ const need = "*type some word after command*\n*විධානයට පසු�
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'waifu ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'anime ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         var ttinullimage = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 
@@ -28,7 +28,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'waifu ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'anime ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
 
         var ttinullimage = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 
