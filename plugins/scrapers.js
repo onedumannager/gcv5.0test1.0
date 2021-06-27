@@ -820,7 +820,6 @@ if (config.WORKTYPE == 'private') {
             );
         }
     }));
-
 }
 else if (config.WORKTYPE == 'public') {
 
