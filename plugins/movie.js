@@ -13,8 +13,8 @@ Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info
 	const response = await got(url);
 	const json = JSON.parse(response.body);
 	if (json.Response != 'True') return await message.client.sendMessage(message.jid, '*Not found.*', MessageType.text, { quoted: message.data });
-	let msg = '```';
-	msg += 'Title      : ' + json.Title + '\n\n';
+	let msg = '';
+	msg += '*🎞Title*\n' + json.Title + '\n\n';
 	msg += 'Year       : ' + json.Year + '\n\n';
 	msg += 'Rated      : ' + json.Rated + '\n\n';
 	msg += 'Released   : ' + json.Released + '\n\n';
