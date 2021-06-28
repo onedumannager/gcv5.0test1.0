@@ -516,7 +516,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // Hoşgeldin Mesajı
             var gb = await getMessage(msg.key.remoteJid);
-               var ttinullimage = await axios.get(`https://netfile2link.herokuapp.com/9738`, { responseType: 'arraybuffer' })
+            if (gb !== false) {
+                var ttinullimage = await axios.get(`https://netfile2link.herokuapp.com/9738`, { responseType: 'arraybuffer' })
                 await conn.sendMessage(msg.key.remoteJid, Buffer.from(ttinullimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: ' Welcome to X-Troid'+ gb.message});
             }
             return;
