@@ -1,7 +1,9 @@
 const Asena = require('../events');
-const { MessageType } = require('@adiwajshing/baileys');
+const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
+const axios = require('axios');
+const fs = require('fs')
 //
 
 if (Config.WORKTYPE == 'private') {
@@ -29,7 +31,9 @@ Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info
 	msg += 'Production : ' + json.Production + '\n\n';
 	msg += 'imdbRating : ' + json.imdbRating + '\n\n';
 	msg += 'imdbVotes  : ' + json.imdbVotes + '```';
-	await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
+	var ttinullimage = await axios.get(json.Poster, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: msg });
 }));
 }
 
