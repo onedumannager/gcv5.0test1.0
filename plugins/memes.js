@@ -61,9 +61,9 @@ else if (Config.WORKTYPE == 'public') {
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var topText, bottomText;
         if (match[1].includes(';')) {
-            var split = match[1].split(';');
-            topText = split[1];
-            bottomText = split[0];
+            var split = match[1].split(',');
+            topText = split[0];
+            bottomText = split[1];
         }
 	    else {
             topText = match[1];
@@ -96,9 +96,9 @@ else if (Config.WORKTYPE == 'public') {
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var topText, bottomText;
         if (match[1].includes(';')) {
-            var split = match[1].split(';');
-            topText = split[1];
-            bottomText = split[0];
+            var split = match[1].split(',');
+            topText = split[0];
+            bottomText = split[1];
         }
 	    else {
             topText = match[1];
