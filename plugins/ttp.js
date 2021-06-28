@@ -748,8 +748,8 @@ Asena.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (
     });
 }));
 
-Asena.addCommand({pattern: 'skitty ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    lasiapi.photooxy("https://textpro.me/create-realistic-cloud-text-effect-online-free-999.html",
+Asena.addCommand({pattern: 'juice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.photooxy("https://textpro.me/fruit-juice-text-effect-861.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -759,8 +759,8 @@ Asena.addCommand({pattern: 'skitty ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/lizy/kitty.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/kitty.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/juice.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/juice.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
