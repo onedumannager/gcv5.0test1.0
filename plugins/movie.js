@@ -31,7 +31,7 @@ Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info
 	msg += 'Production : ' + json.Production + '\n\n';
 	msg += 'imdbRating : ' + json.imdbRating + '\n\n';
 	msg += 'imdbVotes  : ' + json.imdbVotes + '```';
-	var ttinullimage = await axios.get(json.Poster, { responseType: 'arraybuffer' })
+	var ttinullimage = await axios.get('json.Poster', { responseType: 'arraybuffer' })
 	
 	await message.client.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: msg });
 }));
