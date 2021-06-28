@@ -1,7 +1,7 @@
 /* 
 */
 
-const thiccysapi = require('textmaker-thiccy'); // Import NPM Package
+const thiccysapi = require('textmaker-lasi'); // Import NPM Package
 
 const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
