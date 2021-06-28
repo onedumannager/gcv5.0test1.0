@@ -7,7 +7,7 @@ const fs = require('fs')
 //
 
 if (Config.WORKTYPE == 'private') {
-Asena.addCommand({ pattern: 'hpmod ?(.*)', fromMe: true, desc: "Get Mod App From Happymod" }, (async (message, match) => {
+Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: true, desc: "Get Mod App From Happymod" }, (async (message, match) => {
 	if (response.statusCode === 200) return 
     
     await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
