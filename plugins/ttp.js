@@ -1,12 +1,4 @@
-/* Codded by Phaticusthiccy
-
-Unlimited API for Photooxy, Textpro and Instagram scraper.
-
-Material: https://www.npmjs.com/package/textmaker-thiccy
-Github: https://github.com/phaticusthiccy/TextMaker-Unlimited
-
-This code works with unlimited and completely free an API scraper.
-Don't use it for illegal purposes.
+/* 
 */
 
 const thiccysapi = require('textmaker-thiccy'); // Import NPM Package
@@ -177,8 +169,8 @@ Asena.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/devil.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/devil.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -196,8 +188,8 @@ Asena.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/bear.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bear.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/bear.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/bear.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -224,8 +216,8 @@ Asena.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/wolf.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/wolf.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/wolf.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/wolf.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -243,8 +235,8 @@ Asena.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/neon.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/neon.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -262,8 +254,8 @@ Asena.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/neon2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/neon2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -281,8 +273,8 @@ Asena.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/li.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/li.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/li.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/li.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -300,8 +292,8 @@ Asena.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/joker.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/joker.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/joker.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/joker.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -328,8 +320,8 @@ Asena.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ninja.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ninja.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/ninja.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ninja.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -347,8 +339,8 @@ Asena.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/tt.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/tt.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/tt.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -366,8 +358,8 @@ Asena.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/bkh.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bkh.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/bkh.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/bkh.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -394,8 +386,8 @@ Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/marvel.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/marvel.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/marvel.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/marvel.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -422,8 +414,8 @@ Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/mar2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/mar2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/mar2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/mar2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -450,8 +442,8 @@ Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: tru
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/aven.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/aven.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/aven.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/aven.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -478,8 +470,8 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/tt2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/tt2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/tt2.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -506,8 +498,8 @@ Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ttgra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ttgra.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/ttgra.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ttgra.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -534,8 +526,8 @@ Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/t2gra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t2gra.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/t2gra.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/t2gra.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -562,8 +554,8 @@ Asena.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/lion.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/lion.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/lion.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lion.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -581,8 +573,8 @@ Asena.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon3.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon3.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/neon3.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/neon3.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -600,8 +592,8 @@ Asena.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ice.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ice.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/ice.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ice.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -628,8 +620,8 @@ Asena.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/space.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/space.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/space.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/space.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -647,8 +639,8 @@ Asena.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/smoke.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/smoke.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/smoke.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/smoke.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -662,8 +654,8 @@ Asena.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, 
         });
     };
     var uri = encodeURI(match[1])
-    await download(`https://api.xteam.xyz/photooxy/neonlight?text=${uri}&APIKEY=da5fb2b73ae3e451`, '/root/WhatsAsenaDuplicated/glowttp.jpg', async() => {                          
-        await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/glowttp.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+    await download(`https://api.xteam.xyz/photooxy/neonlight?text=${uri}&APIKEY=da5fb2b73ae3e451`, '/root/lizy/glowttp.jpg', async() => {                          
+        await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/glowttp.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
     })
 }));
 Asena.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
@@ -677,8 +669,8 @@ Asena.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/tfire.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tfire.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/tfire.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/tfire.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -696,8 +688,8 @@ Asena.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/hp.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/hp.jpg'), MessageType.image, { caption: 'PINKY' })
+              await download(`${data}`, '/root/lizy/hp.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/hp.jpg'), MessageType.image, { caption: 'PINKY' })
               })
           } catch(err) { 
               console.log(err)
@@ -715,8 +707,8 @@ Asena.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t4n.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/t4n.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -734,8 +726,8 @@ Asena.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: tru
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/cmth.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cmth.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/cmth.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/cmth.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -753,8 +745,8 @@ Asena.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/cup.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cup.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/cup.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/cup.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
