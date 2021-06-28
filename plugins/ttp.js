@@ -759,7 +759,7 @@ Asena.addCommand({pattern: 'skitty ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/lizy/cup.jpg', async() => {                          
+              await download(`${data}`, '/root/lizy/kitty.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/kitty.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
