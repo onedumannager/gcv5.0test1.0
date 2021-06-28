@@ -20,8 +20,8 @@ Asena.addCommand({pattern: 'happymod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC
 		const json = JSON.parse(response.body);
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
 		'*📕 ' + Lang.NAMEY +'* ```' + json.result[0].title + '```\n\n' + 
-		'*📘 ' + Lang.SIZE +'* ```' + json.result[0].size + '```\n\n\n' + 
-		'*📗 ' + Lang.DOWNLOAD +':* ```' + json.result[0].link + '```\n', MessageType.text);
+		'*📘 ' + Lang.Rate +'* ```' + json.result[0].rating + '```\n\n\n' + 
+		'*📗 ' + Lang.DOWNLOAD +':* ```' + json.result[0].url + '```\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
 	}
@@ -36,8 +36,8 @@ else if (Config.WORKTYPE == 'public') {
 		const json = JSON.parse(response.body);
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
 		'*📕 ' + Lang.NAMEY +'* ```' + json.result[0].title + '```\n\n' + 
-		'*📘 ' + Lang.SIZE +'* ```' + json.result[0].size + '```\n\n\n' + 
-		'*📗 ' + Lang.DOWNLOAD +':* ```' + json.result[0].link + '```\n', MessageType.text);
+		'*📘 ' + Lang.Rate +'* ```' + json.result[0].rating + '```\n\n\n' + 
+		'*📗 ' + Lang.DOWNLOAD +':* ```' + json.result[0].url + '```\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text);
 	}
