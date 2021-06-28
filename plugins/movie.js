@@ -31,16 +31,16 @@ Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info
 	msg += 'Production : ' + json.Production + '\n\n';
 	msg += 'imdbRating : ' + json.imdbRating + '\n\n';
 	msg += 'imdbVotes  : ' + json.imdbVotes + '```';
-	var ttinullimage = await axios.get('json.Poster', { responseType: 'arraybuffer' })
+
+	var respoimage = await axios.get(`https://telegra.ph/file/ea34e463b6d09d967c063.jpg`, { responseType: 'arraybuffer' })
 	
-	await message.client.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: msg });
+	await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
 }
 
 else if (Config.WORKTYPE == 'public') {
 	
-	
-	Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info." }, (async (message, match) => {
+Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info." }, (async (message, match) => {
 	if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
 	let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
 	const response = await got(url);
@@ -64,6 +64,9 @@ else if (Config.WORKTYPE == 'public') {
 	msg += 'Production : ' + json.Production + '\n\n';
 	msg += 'imdbRating : ' + json.imdbRating + '\n\n';
 	msg += 'imdbVotes  : ' + json.imdbVotes + '```';
-	await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
+
+	var respoimage = await axios.get(`https://telegra.ph/file/ea34e463b6d09d967c063.jpg`, { responseType: 'arraybuffer' })
+	
+	await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg });
 }));
 }
