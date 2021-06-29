@@ -152,6 +152,26 @@ Asena.addCommand({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (messag
         command_cmd + '```.glitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '*.glitch Xtroid;Lasiya*\n\n'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
+
+Asena.addCommand({pattern: 'lil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/lil.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lil.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
 Asena.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html",
         `${match[1]}`
