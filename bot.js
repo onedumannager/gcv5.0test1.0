@@ -525,6 +525,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
              catch { pp = await message.client.getProfilePicture(); }
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) =>
          { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: "\n»»————　♔　———-««\n" + gb.message });
+          });
             }
             return;
         }
