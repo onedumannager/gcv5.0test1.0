@@ -518,12 +518,8 @@ if (msg.messageStubType === 32 || msg.messageStubType === 28) {
     // Hoşgeldin Mesajı
     var gb = await getMessage(msg.key.remoteJid);
     if (gb !== false) {
-        if (gb.message.includes('{gpp}')) {
-            var ppUrl = await message.client.getProfilePicture(msg.key.remoteJid) 
-            const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
-            await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message});
-
-        }
+var ttinullimage = await axios.get(`https://netfile2link.herokuapp.com/9738`, { responseType: 'arraybuffer' })
+await conn.sendMessage(msg.key.remoteJid, Buffer.from(ttinullimage.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message +'\n\n                 ᴾᵒʷᵉʳᵈ ᵇʸ ˣ⁻ᵀʳᵒᶦᵈ'});
     }
     return;
 }
