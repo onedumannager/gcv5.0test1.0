@@ -535,6 +535,9 @@
             "HİRE": "Can s/he Hirable?:",
             "URL": "Profile URL:",
             "UPDATE": "Last Update:"
-        }
+        },
+         "ban": {
+            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github lasiyaWA"
+         }
     }
 }
