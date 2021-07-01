@@ -46,7 +46,7 @@ if (Config.WORKTYPE == 'private') {
      var ttinullimage = await axios.get(`https://restfulapi.my.id/api/textmaker/attp?text=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
 
-        await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
+        await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.video, { mimetype: Mimetype.webp })
 
     }));
 
