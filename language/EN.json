@@ -537,7 +537,7 @@
             "UPDATE": "Last Update:"
         },
          "ban": {
-            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github lasiyaWA"
+            "pakaya": ".test"
          }
     }
 }
