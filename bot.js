@@ -506,19 +506,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
         // ==================== Greetings ====================
+        
 if (msg.messageStubType === 32 || msg.messageStubType === 28) {
     // Görüşürüz Mesajı
     var gb = await getMessage(msg.key.remoteJid, 'goodbye');
     if (gb !== false) {
-        if (gb.message.includes('{gpp}')) {
-            var ppUrl = await message.client.getProfilePicture(msg.key.remoteJid) 
-            var nwjson = await message.client.groupMetadata(msg.key.remoteJid)
-            const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
-            await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{botowner}', conn.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
-        } else {
-            var nwjson = await message.client.groupMetadata(msg.key.remoteJid)
-            await conn.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', conn.user.name), MessageType.text);
-        }
+        await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
     }
     return;
 } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
@@ -527,12 +520,9 @@ if (msg.messageStubType === 32 || msg.messageStubType === 28) {
     if (gb !== false) {
         if (gb.message.includes('{gpp}')) {
             var ppUrl = await message.client.getProfilePicture(msg.key.remoteJid) 
-            var nwjson = await message.client.groupMetadata(msg.key.remoteJid)
             const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
-            await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{botowner}', conn.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
-        } else {
-            var nwjson = await message.client.groupMetadata(msg.key.remoteJid)
-            await conn.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', conn.user.name), MessageType.text);
+            await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message});
+
         }
     }
     return;
