@@ -52,8 +52,8 @@ if (config.WORKTYPE == 'private') {
           if (match[1] === "sl" || match[1] === "srilanka" || match[1] === "Sri lanka" || match[1] === "Srilnka" || match[1] === "srelanka") {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri Lanka").then(async ok  => {
-                    resp = JSON.parse(ok.body);
-                    await message.reply(`🇱🇰 *Datas for Sri Lanka:*\n😷 *සම්පූර්ණ වාර්තාවීම් :* ${resp.cases}\n🏥 *අදදින වාර්තාවීම් :* ${resp.todayCases}\n⚰️ *මුළු මරණ සංඛ්‍යාව :* ${resp.deaths}\n☠️ *අද දින මරණ :* ${resp.todayDeaths}\n💊 *සුවය ලැබූ මුළු ගණන :* ${resp.recovered}\n😷 *සක්‍රිය වාර්තාවීම් :* ${resp.active}\n🆘 *තහවුරු නොවූ :* ${resp.critical}\n🧪 *පරීක්ෂා කර ඇති මුළු ගණන :* ${resp.totalTests}`);
+                    lasi = JSON.parse(ok.body);
+                    await message.reply(`🇱🇰 *Datas for Sri Lanka:*\n😷 *සම්පූර්ණ වාර්තාවීම් :* ${lasi.cases}\n🏥 *අදදින වාර්තාවීම් :* ${lasi.todayCases}\n⚰️ *මුළු මරණ සංඛ්‍යාව :* ${lasi.deaths}\n☠️ *අද දින මරණ :* ${lasi.todayDeaths}\n💊 *සුවය ලැබූ මුළු ගණන :* ${lasi.recovered}\n😷 *සක්‍රිය වාර්තාවීම් :* ${lasi.active}\n🆘 *තහවුරු නොවූ :* ${lasi.critical}\n🧪 *පරීක්ෂා කර ඇති මුළු ගණන :* ${lasi.totalTests}`);
 
                 });
 
@@ -78,8 +78,8 @@ else if (config.WORKTYPE == 'public') {
           if (match[1] === "sl" || match[1] === "srilanka" || match[1] === "Sri lanka" || match[1] === "Srilnka" || match[1] === "srelanka") {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri Lanka").then(async ok  => {
-                    resp = JSON.parse(ok.body);
-                    await message.reply(`🇱🇰 *Datas for Sri Lanka:*\n\n😷 *සම්පූර්ණ වාර්තාවීම් :* ${resp.cases}\n🏥 *අදදින වාර්තාවීම් :* ${resp.todayCases}\n⚰️ *මුළු මරණ සංඛ්‍යාව :* ${resp.deaths}\n☠️ *අද දින මරණ :* ${resp.todayDeaths}\n💊 *සුවය ලැබූ මුළු ගණන :* ${resp.recovered}\n😷 *සක්‍රිය වාර්තාවීම් :* ${resp.active}\n🆘 *තහවුරු නොවූ :* ${resp.critical}\n🧪 *පරීක්ෂා කර ඇති මුළු ගණන :* ${resp.totalTests}`);
+                    lasi = JSON.parse(ok.body);
+                    await message.reply(`🇱🇰 *Datas for Sri Lanka:*\n\n😷 *සම්පූර්ණ වාර්තාවීම් :* ${lasi.cases}\n🏥 *අදදින වාර්තාවීම් :* ${lasi.todayCases}\n⚰️ *මුළු මරණ සංඛ්‍යාව :* ${lasi.deaths}\n☠️ *අද දින මරණ :* ${lasi.todayDeaths}\n💊 *සුවය ලැබූ මුළු ගණන :* ${lasi.recovered}\n😷 *සක්‍රිය වාර්තාවීම් :* ${lasi.active}\n🆘 *තහවුරු නොවූ :* ${lasi.critical}\n🧪 *පරීක්ෂා කර ඇති මුළු ගණන :* ${lasi.totalTests}`);
 
                 });
 
@@ -95,5 +95,31 @@ else if (config.WORKTYPE == 'public') {
             );
         }
         }));
+
+//===================================================================================================================================================================================================
+
+        Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+            if (match[1] === "sl" || match[1] === "srilanka" || match[1] === "Sri lanka" || match[1] === "Srilnka" || match[1] === "srelanka") {
+              try{
+                  const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri Lanka").then(async ok  => {
+                      lasi = JSON.parse(ok.body);
+                      await message.reply(`🇱🇰 *Datas for Sri Lanka:*\n😷 *සම්පූර්ණ වාර්තාවීම් :* ${lasi.cases}\n🏥 *අදදින වාර්තාවීම් :* ${lasi.todayCases}\n⚰️ *මුළු මරණ සංඛ්‍යාව :* ${lasi.deaths}\n☠️ *අද දින මරණ :* ${lasi.todayDeaths}\n💊 *සුවය ලැබූ මුළු ගණන :* ${lasi.recovered}\n😷 *සක්‍රිය වාර්තාවීම් :* ${lasi.active}\n🆘 *තහවුරු නොවූ :* ${lasi.critical}\n🧪 *පරීක්ෂා කර ඇති මුළු ගණන :* ${lasi.totalTests}`);
+  
+                  });
+  
+              } catch (err) {
+                  await message.reply(`Error : \n${err.message}`, MessageType.text)
+              }
+          }
+          else {
+              return await message.client.sendMessage(
+                  message.jid,
+                  Clang.NOT,
+                  MessageType.text
+              );
+          }
+          }));
+
+          
 
 }

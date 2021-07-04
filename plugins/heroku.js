@@ -189,7 +189,7 @@ if (Config.WORKTYPE == 'private') {
             headers = {
                 "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
                 "Authorization": "Bearer " + Config.HEROKU.API_KEY,
-                "Accept": "application/vnd.heroku+json; version=3.account-quotas",
+                "Accept": "application/vnd.heroku+lasijson; version=3.account-quotas",
             }
             await got(url, {headers: headers}).then(async (res) => {
                const resp = JSON.parse(res.body);
@@ -222,7 +222,7 @@ else if (Config.WORKTYPE == 'public') {
             headers = {
                 "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
                 "Authorization": "Bearer " + Config.HEROKU.API_KEY,
-                "Accept": "application/vnd.heroku+json; version=3.account-quotas",
+                "Accept": "application/vnd.heroku+lasijson; version=3.account-quotas",
             }
             await got(url, {headers: headers}).then(async (res) => {
                const resp = JSON.parse(res.body);
@@ -252,7 +252,7 @@ else if (Config.WORKTYPE == 'public') {
             headers = {
                 "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
                 "Authorization": "Bearer " + Config.HEROKU.API_KEY,
-                "Accept": "application/vnd.heroku+json; version=3.account-quotas",
+                "Accept": "application/vnd.heroku+lasijson; version=3.account-quotas",
             }
             await got(url, {headers: headers}).then(async (res) => {
                const resp = JSON.parse(res.body);

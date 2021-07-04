@@ -643,9 +643,9 @@ if (Config.WORKTYPE == 'private') {
         r_text[620] = "https://images.wallpaperscraft.com/image/smiley_emotions_minimalism_134124_1350x2400.jpg";
         var i = Math.floor(621*Math.random())
 
-        var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+        var lasiimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid, Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.CAPTION_KEY})
+        await message.client.sendMessage(message.jid, Buffer(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.CAPTION_KEY})
 
     }));
 }
@@ -1278,9 +1278,9 @@ else if (Config.WORKTYPE == 'public') {
         r_text[620] = "https://images.wallpaperscraft.com/image/smiley_emotions_minimalism_134124_1350x2400.jpg";
         var i = Math.floor(621*Math.random())
 
-        var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+        var lasiimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid, Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.CAPTION_KEY})
+        await message.client.sendMessage(message.jid, Buffer(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.CAPTION_KEY})
 
     }));
     Asena.addCommand({pattern: 'wallpaper', fromMe: true, desc: Lang.WP, dontAddCommandList: true}, (async (message, match) => {
@@ -1910,9 +1910,9 @@ else if (Config.WORKTYPE == 'public') {
         r_text[620] = "https://images.wallpaperscraft.com/image/smiley_emotions_minimalism_134124_1350x2400.jpg";
         var i = Math.floor(621*Math.random())
 
-        var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+        var lasiimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid, Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.CAPTION_KEY})
+        await message.client.sendMessage(message.jid, Buffer(lasiimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.CAPTION_KEY})
 
     }));
 }

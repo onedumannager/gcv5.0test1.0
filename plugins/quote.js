@@ -16,9 +16,9 @@ Asena.addCommand({pattern: 'quote ?(.*)', fromMe: true, desc: QUOTE_DESC}, async
 	const url = `https://api.quotable.io/random`;
 	try {
 		const response = await got(url);
-		const json = JSON.parse(response.body);
-		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*📌 ' + QUOTE +'* ```' + json.content + '```\n\n' +
-		'*✒️' + AUTHOR +'* ```' + json.author+ '```\n', MessageType.text);
+		const lasijson = JSON.parse(response.body);
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*📌 ' + QUOTE +'* ```' + lasijson.content + '```\n\n' +
+		'*✒️' + AUTHOR +'* ```' + lasijson.author+ '```\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, NOT_FOUNDA, MessageType.text);
 	}
@@ -33,9 +33,9 @@ Asena.addCommand({pattern: 'quote ?(.*)', fromMe: true, desc: QUOTE_DESC}, async
 	const url = `https://api.quotable.io/random`;
 	try {
 		const response = await got(url);
-		const json = JSON.parse(response.body);
-		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*📌 ' + QUOTE +'* ```' + json.content + '```\n\n' +
-		'*✒️' + AUTHOR +'* ```' + json.author+ '```\n', MessageType.text);
+		const lasijson = JSON.parse(response.body);
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*📌 ' + QUOTE +'* ```' + lasijson.content + '```\n\n' +
+		'*✒️' + AUTHOR +'* ```' + lasijson.author+ '```\n', MessageType.text);
 	} catch {
 		return await message.client.sendMessage(message.jid, NOT_FOUNDA, MessageType.text);
 	}

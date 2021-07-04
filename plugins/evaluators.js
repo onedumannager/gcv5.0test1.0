@@ -58,7 +58,7 @@ async function antlch() {
 }
 antlch()
 var ldc = ''
-if (Config.LANG == 'TR') ldc = '*Link Tespit Edildi!*'
+if (Config.LANG == 'TR') ldc = '*ලින්කුවක් දමා ඇත*'
 if (Config.LANG == 'EN') ldc = '*Link Detected!*'
 
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
@@ -83,7 +83,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             await message.client.groupRemove(message.jid, [message.data.participant]);         
             await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
         }
-                else if (regex3.test(message.message)) {
+            else if (regex3(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;

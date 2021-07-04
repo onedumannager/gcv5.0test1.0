@@ -40,8 +40,8 @@ const recognizeAudio = () => {
         headers: headers
     }
     return fetch("https://api.wit.ai/speech?v=20200219", requestBody)
-        .then(response => response.json())
-        .then(json => json._text)
+        .then(response => response.lasijson())
+        .then(lasijson => lasijson._text)
 }
 const convertToWav = file => {
     return ffmpeg(file)

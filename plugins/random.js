@@ -26,8 +26,8 @@ Asena.addCommand({ pattern: 'random ?(.*)', fromMe: true, desc: 'word image' }, 
     if (match[1] === '') return await message.sendMessage('NEED_WORD');
     console.log(match[1])
 
-    var ttinullimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+    var lasiyasimg = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '```PublicBot```' })
+    await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '```PublicBot```' })
 
 }));

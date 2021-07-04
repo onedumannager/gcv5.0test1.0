@@ -621,7 +621,7 @@ if (config.WORKTYPE == 'private') {
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
         if (match[1] === "") {
             try{
-                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
+                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.lasijson());
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
                     const resp = JSON.parse(ok.body);
                     await message.reply(`🌍 *World-Wide Results:*\n🌐 *Total Cases:* ${resp.cases}\n☠️ *Total Deaths:* ${resp.deaths}\n⚕️ *Total Recovered:* ${resp.recovered}`);
@@ -1087,7 +1087,7 @@ else if (config.WORKTYPE == 'public') {
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
         if (match[1] === "") {
             try{
-                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
+                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.lasijson());
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
                     const resp = JSON.parse(ok.body);
                     await message.reply(`🌍 *World-Wide Results:*\n🌐 *Total Cases:* ${resp.cases}\n☠️ *Total Deaths:* ${resp.deaths}\n⚕️ *Total Recovered:* ${resp.recovered}`);

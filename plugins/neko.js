@@ -23,9 +23,9 @@ if (Config.WORKTYPE == 'private') {
         if (!message.reply_message.text) return await message.sendMessage(Lang.MUST_TEXT);
         let base_URI = "https://nekobin.com/api/documents";
         try {
-            const response = await got.post(base_URI, {json : {content : message.reply_message.text}}); 
-            json = JSON.parse(response.body);
-            neko_url = 'https://nekobin.com/' + json.result.key;
+            const response = await got.post(base_URI, {lasijson : {content : message.reply_message.text}}); 
+            lasijson = JSON.parse(response.body);
+            neko_url = 'https://nekobin.com/' + lasijson.result.key;
             await message.reply(neko_url);        
         } catch (err) {
             await message.reply(err.message, MessageType.text);
@@ -42,9 +42,9 @@ else if (Config.WORKTYPE == 'public') {
         if (!message.reply_message.text) return await message.sendMessage(Lang.MUST_TEXT);
         let base_URI = "https://nekobin.com/api/documents";
         try {
-            const response = await got.post(base_URI, {json : {content : message.reply_message.text}}); 
-            json = JSON.parse(response.body);
-            neko_url = 'https://nekobin.com/' + json.result.key;
+            const response = await got.post(base_URI, {lasijson : {content : message.reply_message.text}}); 
+            lasijson = JSON.parse(response.body);
+            neko_url = 'https://nekobin.com/' + lasijson.result.key;
             await message.reply(neko_url);        
         } catch (err) {
             await message.reply(err.message, MessageType.text);
@@ -58,9 +58,9 @@ else if (Config.WORKTYPE == 'public') {
         if (!message.reply_message.text) return await message.sendMessage(Lang.MUST_TEXT);
         let base_URI = "https://nekobin.com/api/documents";
         try {
-            const response = await got.post(base_URI, {json : {content : message.reply_message.text}}); 
-            json = JSON.parse(response.body);
-            neko_url = 'https://nekobin.com/' + json.result.key;
+            const response = await got.post(base_URI, {lasijson : {content : message.reply_message.text}}); 
+            lasijson = JSON.parse(response.body);
+            neko_url = 'https://nekobin.com/' + lasijson.result.key;
             await message.reply(neko_url);        
         } catch (err) {
             await message.reply(err.message, MessageType.text);
