@@ -1,11 +1,11 @@
-const Asena = require('../events');
+const XTroid = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
 
 
 
-Asena.addCommand({ pattern: 'random ?(.*)', fromMe: true, desc: 'word image' }, (async (message, match) => {
+XTroid.addCommand({ pattern: 'random ?(.*)', fromMe: true, desc: 'word image' }, (async (message, match) => {
 
     var r_text = new Array ();
 

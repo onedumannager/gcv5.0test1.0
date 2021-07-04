@@ -6,7 +6,7 @@
 # Get more about devaoloper https://lasiya.ml
 */
 
-const Asena = require('../events');
+const XTroid = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -19,7 +19,7 @@ const Desk = "Temp logo pack\nතාවකාලික පින්තුර ස
 if (Config.WORKTYPE == 'private') {
 
 
-    Asena.addCommand({ pattern: 'tpack ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tpack ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
         await message.sendMessage(Desk);
         
     }));
@@ -28,7 +28,7 @@ if (Config.WORKTYPE == 'private') {
 
 
 
-    Asena.addCommand({ pattern: 'tmug ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tmug ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -38,7 +38,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'tlove ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tlove ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -48,7 +48,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'tnaru ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tnaru ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -58,7 +58,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'tgrass ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tgrass ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -68,7 +68,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'tsky ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tsky ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -78,7 +78,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'tcof ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tcof ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -88,7 +88,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'tneon ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tneon ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -98,7 +98,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'tpubg ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tpubg ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -109,7 +109,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 
 
-    Asena.addCommand({pattern: 'tbit ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    XTroid.addCommand({pattern: 'tbit ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
       
@@ -126,7 +126,7 @@ if (Config.WORKTYPE == 'private') {
     
         }));
 
-        Asena.addCommand({pattern: 'tbt ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+        XTroid.addCommand({pattern: 'tbt ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
             if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
           
@@ -152,12 +152,12 @@ if (Config.WORKTYPE == 'private') {
 if (Config.WORKTYPE == 'public') {
 
 
-    Asena.addCommand({ pattern: 'tpack ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tpack ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
         await message.sendMessage(Desk);
         
     }));
 
-    Asena.addCommand({ pattern: 'tmug ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tmug ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
     
@@ -167,7 +167,7 @@ if (Config.WORKTYPE == 'public') {
     
     }));
     
-    Asena.addCommand({ pattern: 'tlove ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tlove ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
     
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
     
@@ -177,7 +177,7 @@ if (Config.WORKTYPE == 'public') {
     
     }));
     
-    Asena.addCommand({ pattern: 'tnaru ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tnaru ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
     
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
     
@@ -187,7 +187,7 @@ if (Config.WORKTYPE == 'public') {
     
     }));
     
-    Asena.addCommand({ pattern: 'tgrass ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tgrass ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
     
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
     
@@ -197,7 +197,7 @@ if (Config.WORKTYPE == 'public') {
     
     }));
     
-    Asena.addCommand({ pattern: 'tsky ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tsky ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
     
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
     
@@ -207,7 +207,7 @@ if (Config.WORKTYPE == 'public') {
     
     }));
     
-    Asena.addCommand({ pattern: 'tcof ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tcof ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
     
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
     
@@ -217,7 +217,7 @@ if (Config.WORKTYPE == 'public') {
     
     }));
     
-    Asena.addCommand({ pattern: 'tneon ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tneon ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
     
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
     
@@ -227,7 +227,7 @@ if (Config.WORKTYPE == 'public') {
     
     }));
     
-    Asena.addCommand({ pattern: 'tneon ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'tneon ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
     
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
     
@@ -238,7 +238,7 @@ if (Config.WORKTYPE == 'public') {
     }));
     
     
-    Asena.addCommand({pattern: 'tbit ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    XTroid.addCommand({pattern: 'tbit ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     
         if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
       
@@ -255,7 +255,7 @@ if (Config.WORKTYPE == 'public') {
     
         }));
     
-        Asena.addCommand({pattern: 'tbt ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+        XTroid.addCommand({pattern: 'tbt ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     
             if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
           

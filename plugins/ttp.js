@@ -3,7 +3,7 @@
 
 const lasiapi = require('textmaker-lasi'); // Import NPM Package
 
-const Asena = require('../events');
+const XTroid = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -21,7 +21,7 @@ if (Config.LANG == 'EN') desc_msg = 'X-Troid Premume Logo colection'
 if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-Asena.addCommand({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+XTroid.addCommand({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -153,7 +153,7 @@ Asena.addCommand({pattern: 'lpack$', fromMe: wk, desc: desc_msg}, (async (messag
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
 
-Asena.addCommand({pattern: 'lil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'lil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -172,7 +172,7 @@ Asena.addCommand({pattern: 'lil ?(.*)', fromMe: wk, dontAddCommandList: true}, (
           } 
     });
 }));
-Asena.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -191,7 +191,7 @@ Asena.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -210,7 +210,7 @@ Asena.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, 
           } 
     });
 }));
-Asena.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -238,7 +238,7 @@ Asena.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
           } 
     });
 }));
-Asena.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -257,7 +257,7 @@ Asena.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, 
           } 
     });
 }));
-Asena.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/neon-text-effect-online-879.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -276,7 +276,7 @@ Asena.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/create-thunder-text-effect-online-881.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -295,7 +295,7 @@ Asena.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/create-logo-joker-online-934.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -314,7 +314,7 @@ Asena.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -342,7 +342,7 @@ Asena.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/advanced-glow-text-effect-873.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -361,7 +361,7 @@ Asena.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-Asena.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/bokeh-text-effect-876.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -380,7 +380,7 @@ Asena.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -408,7 +408,7 @@ Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -436,7 +436,7 @@ Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -464,7 +464,7 @@ Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -492,7 +492,7 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -520,7 +520,7 @@ Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
           } 
     });
 }));
-Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -548,7 +548,7 @@ Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -576,7 +576,7 @@ Asena.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, 
           } 
     });
 }));
-Asena.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/neon-text-effect-online-963.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -595,7 +595,7 @@ Asena.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.textpro("https://textpro.me/ice-cold-text-effect-862.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -614,7 +614,7 @@ Asena.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (
           } 
     });
 }));
-Asena.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(',')) {
         var split = match[1].split(',');
@@ -642,7 +642,7 @@ Asena.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -661,7 +661,7 @@ Asena.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var download = async(uri, filename, callback) => {
         await request.head(uri, async(err, res, body) => {    
             await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -672,7 +672,7 @@ Asena.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, 
         await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/glowttp.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
     })
 }));
-Asena.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -691,7 +691,7 @@ Asena.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, 
           } 
     });
 }));
-Asena.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -710,7 +710,7 @@ Asena.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -729,7 +729,7 @@ Asena.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -748,7 +748,7 @@ Asena.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-Asena.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.photooxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -768,7 +768,7 @@ Asena.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (
     });
 }));
 
-Asena.addCommand({pattern: 'juice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'juice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     lasiapi.photooxy("https://textpro.me/fruit-juice-text-effect-861.html",
         `${match[1]}`
         ).then(async (data) => { 

@@ -6,7 +6,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const Asena = require('../events');
+const XTroid = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 
@@ -15,10 +15,10 @@ const Lang = Language.getString('_asena');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    XTroid.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        Asena.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -47,7 +47,7 @@ if (Config.WORKTYPE == 'private') {
             );    
     } else {
         var CMD_HELP = '';
-        Asena.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -83,10 +83,10 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'x ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    XTroid.addCommand({pattern: 'x ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        Asena.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -115,7 +115,7 @@ else if (Config.WORKTYPE == 'public') {
             );     
     } else {
         var CMD_HELP = '';
-        Asena.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -147,10 +147,10 @@ else if (Config.WORKTYPE == 'public') {
     }
 }));
 
-Asena.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        Asena.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -179,7 +179,7 @@ Asena.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (
             );     
     } else {
         var CMD_HELP = '';
-        Asena.commands.map(
+        XTroid.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
