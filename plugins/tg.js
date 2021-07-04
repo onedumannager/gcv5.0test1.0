@@ -12,7 +12,7 @@
 
 */
 
-const Asena = require('../events');
+const XTroid = require('../events');
 
 const {MessageType} = require('@adiwajshing/baileys');
 
@@ -36,7 +36,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 
 }
 
-Asena.addCommand({pattern: 'tg ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
+XTroid.addCommand({pattern: 'tg ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
 
     var im = await (message);
 

@@ -2,7 +2,7 @@
 */
 
 
-const Asena = require('../events');
+const XTroid = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
 const https = require('https');
@@ -40,8 +40,8 @@ const recognizeAudio = () => {
         headers: headers
     }
     return fetch("https://api.wit.ai/speech?v=20200219", requestBody)
-        .then(response => response.json())
-        .then(json => json._text)
+        .then(response => response.lasijson())
+        .then(lasijson => lasijson._text)
 }
 const convertToWav = file => {
     return ffmpeg(file)
@@ -50,14 +50,14 @@ const convertToWav = file => {
         .save('output.wav')
 }
 
-Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
+XTroid.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
     if (message.message.startsWith('Eva') && conf.FULLEVA !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
-        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'XTroid' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
         var finm = message.message.replace('Eva', '').replace(' ', '')   
         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-        if (ainame !== 'Asena') return;
+        if (ainame !== 'XTroid') return;
         var ldet = lngDetector.detect(finm)
         var trmsg = ''
         if (ldet[0][0] !== 'english') {
@@ -79,17 +79,17 @@ Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComman
         })
     }
 }));
-Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
         if (conf.FULLEVA == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
                         var unique_ident = message.client.user.jid.split('@')[0]      
-                        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'XTroid' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
                         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                        if (ainame !== 'Asena') return;
+                        if (ainame !== 'XTroid') return;
                         var finm = message.message
                         var ldet = lngDetector.detect(finm)
                         var trmsg = ''
@@ -115,9 +115,9 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             } else if (message.jid.includes('-') && message.reply_message !== false) {
                 if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
                     var unique_ident = message.client.user.jid.split('@')[0]      
-                    let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                    let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'XTroid' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                     var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                    if (ainame !== 'Asena') return;
+                    if (ainame !== 'XTroid') return;
                     var finm = message.message
                     var ldet = lngDetector.detect(finm)
                     var trmsg = ''
@@ -141,9 +141,9 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                 }
             } else {
                 var unique_ident = message.client.user.jid.split('@')[0]      
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'XTroid' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                 var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                if (ainame !== 'Asena') return;
+                if (ainame !== 'XTroid') return;
                 var finm = message.message
                 var ldet = lngDetector.detect(finm)
                 var trmsg = ''
@@ -189,7 +189,7 @@ if (conf.LANG == 'EN') {
     succ_off = 'Liza Set to Semi-Functional! Please wait a bit! ☑️'
 }
 
-Asena.addCommand({ pattern: 'liza ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.liza on / off' }, (async (message, match) => {
+XTroid.addCommand({ pattern: 'liza ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.liza on / off' }, (async (message, match) => {
     var eva_status = `${conf.FULLEVA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {

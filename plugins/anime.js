@@ -8,7 +8,7 @@
 rgtthrth : rawes60457@edmondpt.com
 */
 
-const Asena = require('../events');
+const XTroid = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -17,22 +17,30 @@ const need = "*type some word after command*\n*විධානයට පසු�
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'anime ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'anime ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
-        var ttinullimage = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
+        var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
+        await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
 
     }));
 }
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'anime ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'anime ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
 
-        var ttinullimage = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
+        var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
+        await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
+
+    }));
+
+    XTroid.addCommand({ pattern: 'anime ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+
+        var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
+
+        await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
 
     }));
     
