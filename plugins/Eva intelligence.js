@@ -58,7 +58,7 @@ XTroid.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
         var trmsg = finm
 
         var uren = encodeURI(trmsg)
-        await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+        await axios.get('http://api.brainshop.ai/get?bid=157582&key=HzYiQOTcF1zOB0cs&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
             var fins = ''                           
             if (conf.LANG !== 'EN') {
                 ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -82,7 +82,7 @@ XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                         var trmsg = finm 
                        
                         var uren = encodeURI(trmsg)
-                        await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                        await axios.get('http://api.brainshop.ai/get?bid=157582&key=HzYiQOTcF1zOB0cs&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                             var fins = ''                           
                             if (conf.LANG !== 'EN') {
                                 ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -102,7 +102,7 @@ XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                     var trmsg = finm
 
                     var uren = encodeURI(trmsg)
-                    await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                    await axios.get('http://api.brainshop.ai/get?bid=157582&key=HzYiQOTcF1zOB0cs&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                         var fins = ''                           
                         if (conf.LANG !== 'EN') {
                             ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -120,7 +120,7 @@ XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                 var trmsg = finm
 
                 var uren = encodeURI(trmsg)
-                await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                await axios.get('http://api.brainshop.ai/get?bid=157582&key=HzYiQOTcF1zOB0cs&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                     var fins = ''                           
                     if (conf.LANG !== 'EN') {
                         ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
