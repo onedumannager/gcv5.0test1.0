@@ -24,57 +24,21 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + conf.HEROKU.APP_NAME;
 
 let wk = conf.WORKTYPE == 'public' ? false : true
-var vtalk_dsc = ''
+
 var reply_eva = ''
 
-const recognizeAudio = () => {
-    const headers = new Headers({
-        'Content-Type': 'audio/wav',
-        "Authorization": `Bearer ${conf.WITAI_API}`,
-        'Cache-Control': 'no-cache',
-        'Transfer-Encoding': 'chunked'
-    })
-    const requestBody = {
-        method: "POST",
-        body: fs.readFileSync('output.wav'),
-        headers: headers
-    }
-    return fetch("https://api.wit.ai/speech?v=20200219", requestBody)
-        .then(response => response.lasijson())
-        .then(lasijson => lasijson._text)
-}
-const convertToWav = file => {
-    return ffmpeg(file)
-        .audioCodec('pcm_s16le')
-        .format('wav')
-        .save('output.wav')
-}
+
 
 XTroid.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('Eva') && conf.FULLEVA !== 'true') {        
+    if (message.message.startsWith('Liza') && conf.FULLEVA !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
-        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'XTroid' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-        let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
-        var finm = message.message.replace('Eva', '').replace(' ', '')   
-        var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-        if (ainame !== 'XTroid') return;
-        var ldet = lngDetector.detect(finm)
-        var trmsg = ''
-        if (ldet[0][0] !== 'english') {
-            ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
-            if ('text' in ceviri) {
-                trmsg = ceviri.text
-            }
-        } else { trmsg = finm }
+        var finm = message.message.replace('Liza', '').replace(' ', '')
+        var trmsg = finm
         var uren = encodeURI(trmsg)
+
         await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
-            var fins = ''                           
-            if (conf.LANG !== 'EN') {
-                ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                if ('text' in ceviri) {
-                    fins = ceviri.text
-                }
-            } else { fins = response.data.cnt }
+                    
+            var  fins = response.data.cnt 
             await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
         })
     }
@@ -86,28 +50,11 @@ XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                 message.mention.map(async (jid) => {
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
                         var unique_ident = message.client.user.jid.split('@')[0]      
-                        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'XTroid' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                        let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
-                        var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                        if (ainame !== 'XTroid') return;
                         var finm = message.message
-                        var ldet = lngDetector.detect(finm)
-                        var trmsg = ''
-                        if (ldet[0][0] !== 'english') {
-                            ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
-                            if ('text' in ceviri) {
-                                trmsg = ceviri.text
-                            }
-                        } else { trmsg = finm }
+                        var trmsg = finm
                         var uren = encodeURI(trmsg)
                         await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
-                            var fins = ''                           
-                            if (conf.LANG !== 'EN') {
-                                ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                                if ('text' in ceviri) {
-                                    fins = ceviri.text
-                                }
-                            } else { fins = response.data.cnt }
+                            var  fins = response.data.cnt                          
                             await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
                         })
                     }
@@ -115,53 +62,24 @@ XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
             } else if (message.jid.includes('-') && message.reply_message !== false) {
                 if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
                     var unique_ident = message.client.user.jid.split('@')[0]      
-                    let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'XTroid' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                    var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                    if (ainame !== 'XTroid') return;
+
                     var finm = message.message
-                    var ldet = lngDetector.detect(finm)
-                    var trmsg = ''
-                    if (ldet[0][0] !== 'english') {
-                        ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
-                        if ('text' in ceviri) {
-                            trmsg = ceviri.text
-                        }
-                    } else { trmsg = finm }
+                    var trmsg = finm
                     var uren = encodeURI(trmsg)
+
                     await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
-                        var fins = ''                           
-                        if (conf.LANG !== 'EN') {
-                            ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                            if ('text' in ceviri) {
-                                fins = ceviri.text
-                            }
-                        } else { fins = response.data.cnt }
+                        var  fins = response.data.cnt                              
                         await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
                     })
                 }
             } else {
                 var unique_ident = message.client.user.jid.split('@')[0]      
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'XTroid' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                if (ainame !== 'XTroid') return;
                 var finm = message.message
-                var ldet = lngDetector.detect(finm)
-                var trmsg = ''
-                if (ldet[0][0] !== 'english') {
-                    ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
-                    if ('text' in ceviri) {
-                        trmsg = ceviri.text
-                    }
-                } else { trmsg = finm }
+                var trmsg = finm
                 var uren = encodeURI(trmsg)
+
                 await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
-                    var fins = ''                           
-                    if (conf.LANG !== 'EN') {
-                        ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                        if ('text' in ceviri) {
-                            fins = ceviri.text
-                        }
-                    } else { fins = response.data.cnt }
+                    var  fins = response.data.cnt  
                     await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
                 })
             }
@@ -175,14 +93,14 @@ var already_off = ''
 var succ_on = ''
 var succ_off = ''
 if (conf.LANG == 'SI') {
-    fulleva_dsc = 'Activates full functional Eva features. Turn your account into a ai chatbot!'
+    fulleva_dsc = 'Activates full functional Liza features. Turn your account into a ai chatbot!'
     already_on = 'Liza artificial intelligence is already fully functional.'
     already_off = 'Liza artificial intelligence is currently running semi-functional.'
     succ_on = 'Liza Opened Fully Functionally! Please wait a bit! ✅'
     succ_off = 'Liza Set to Semi-Functional! Please wait a bit! ☑️'
 }
 if (conf.LANG == 'EN') {
-    fulleva_dsc = 'Activates full functional Eva features. Turn your account into a ai chatbot!'
+    fulleva_dsc = 'Activates full functional Liza features. Turn your account into a ai chatbot!'
     already_on = 'Liza artificial intelligence is already fully functional.'
     already_off = 'Liza artificial intelligence is currently running semi-functional.'
     succ_on = 'Liza Opened Fully Functionally! Please wait a bit! ✅'
