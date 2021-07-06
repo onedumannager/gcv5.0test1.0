@@ -84,13 +84,8 @@ XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                         var unique_ident = message.client.user.jid.split('@')[0]      
                         var finm = message.message
                         var ldet = lngDetector.detect(finm)
-                        var trmsg = ''
-                        if (ldet[0][0] !== 'english') {
-                            ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
-                            if ('text' in ceviri) {
-                                trmsg = ceviri.text
-                            }
-                        } else { trmsg = finm }
+                        var trmsg = finm 
+                       
                         var uren = encodeURI(trmsg)
                         await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                             var fins = ''                           
@@ -132,13 +127,8 @@ XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                 var unique_ident = message.client.user.jid.split('@')[0]      
                 var finm = message.message
                 var ldet = lngDetector.detect(finm)
-                var trmsg = ''
-                if (ldet[0][0] !== 'english') {
-                    ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
-                    if ('text' in ceviri) {
-                        trmsg = ceviri.text
-                    }
-                } else { trmsg = finm }
+                var trmsg = finm
+
                 var uren = encodeURI(trmsg)
                 await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                     var fins = ''                           
