@@ -1,5 +1,3 @@
-//this module from lasiya
-
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
 const XTroid = require('../events');
 const Config = require('../config');
@@ -34,7 +32,7 @@ XTroid.addCommand({pattern: 'dem ?(.*)', fromMe: true, desc: DDO}, (async (messa
      
         }
 
-    else if (match[1] == 'off') {
+     if (match[1] == 'off') {
         var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
