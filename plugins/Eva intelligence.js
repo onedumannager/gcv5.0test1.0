@@ -29,7 +29,7 @@ var reply_eva = ''
 
 
 
-XTroid.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
+XTroid.addCommand({on: 'text', fromMe: false, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
     if (message.message.startsWith('Liza') && conf.FULLEVA !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
         var finm = message.message.replace('Liza', '').replace(' ', '')
