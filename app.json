@@ -36,7 +36,7 @@
             "required": true,
             "value": "^[.!;]"
         },
-        "FULL_EVA": {
+        "AI_LIZA": {
             "description": "Turn your account into a chatbot!",
             "required": true,
             "value": "false"

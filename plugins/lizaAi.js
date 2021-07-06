@@ -51,9 +51,9 @@ const convertToWav = file => {
 }
 
 XTroid.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('Eva') && conf.FULLEVA !== 'true') {        
+    if (message.message.startsWith('Liza') && conf.AILIZA !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
-        var finm = message.message.replace('Eva', '').replace(' ', '')   
+        var finm = message.message.replace('Liza', '').replace(' ', '')   
         var ldet = lngDetector.detect(finm)
         var trmsg = finm
 
@@ -71,7 +71,7 @@ XTroid.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
     }
 }));
 XTroid.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-        if (conf.FULLEVA == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
+        if (conf.AILIZA == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
@@ -141,14 +141,14 @@ var already_off = ''
 var succ_on = ''
 var succ_off = ''
 if (conf.LANG == 'SI') {
-    fulleva_dsc = 'Activates full functional Eva features. Turn your account into a ai chatbot!'
+    fulleva_dsc = 'Activates full functional Liza features. Turn your account into a ai chatbot!'
     already_on = 'Liza artificial intelligence is already fully functional.'
     already_off = 'Liza artificial intelligence is currently running semi-functional.'
     succ_on = 'Liza Opened Fully Functionally! Please wait a bit! ✅'
     succ_off = 'Liza Set to Semi-Functional! Please wait a bit! ☑️'
 }
 if (conf.LANG == 'EN') {
-    fulleva_dsc = 'Activates full functional Eva features. Turn your account into a ai chatbot!'
+    fulleva_dsc = 'Activates full functional Liza features. Turn your account into a ai chatbot!'
     already_on = 'Liza artificial intelligence is already fully functional.'
     already_off = 'Liza artificial intelligence is currently running semi-functional.'
     succ_on = 'Liza Opened Fully Functionally! Please wait a bit! ✅'
@@ -156,7 +156,7 @@ if (conf.LANG == 'EN') {
 }
 
 XTroid.addCommand({ pattern: 'liza ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.liza on / off' }, (async (message, match) => {
-    var eva_status = `${conf.FULLEVA}`
+    var eva_status = `${conf.AILIZA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {
             return await message.client.sendMessage(message.jid, '*' + already_on + '*', MessageType.text)
@@ -164,7 +164,7 @@ XTroid.addCommand({ pattern: 'liza ?(.*)', desc: fulleva_dsc, fromMe: true, usag
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['FULL_EVA']: 'true'
+                    ['AI_LIZA']: 'true'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
@@ -177,7 +177,7 @@ XTroid.addCommand({ pattern: 'liza ?(.*)', desc: fulleva_dsc, fromMe: true, usag
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['FULL_EVA']: 'false'
+                    ['AI_LIZA']: 'false'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)

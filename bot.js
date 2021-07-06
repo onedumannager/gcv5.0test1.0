@@ -312,7 +312,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         let afwhasena = config.WORKTYPE == 'public' ? ' Public' : ' Private'
         console.log(chalk.bgGreen('🚀 X-Troid' + afwhasena));
         await new Promise(r => setTimeout(r, 500));
-        let EVA_ACTİON = config.LANG == 'TR' || config.LANG == 'AZ' ? '*🚀 X-Troid Chatbot Olarak Çalışıyor!*  \n\n_Bu modun amacı botu tam fonksiyonel bir yapay zeka sohbet aracına çevirmektir._\n_Normal moda dönmek için_ *.fulleva off* _komutunu kullanabilirsiniz._\n\n*🚀 X-Troid Kullandığın İçin Teşekkürler 💌*\n    *- Eva*' : '*🚀 X-Troid Working as a Chatbot!  *\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.fulleva off* _command to return to normal mode._\n\n*Thanks For Using 🚀 X-Troid 💌*\n    *- Eva*'
+        let EVA_ACTİON = config.LANG == 'TR' || config.LANG == 'AZ' ? '*🚀 X-Troid Chatbot Olarak Çalışıyor!*  \n\n_Bu modun amacı botu tam fonksiyonel bir yapay zeka sohbet aracına çevirmektir._\n_Normal moda dönmek için_ *.liza off* _komutunu kullanabilirsiniz._\n\n*🚀 X-Troid Kullandığın İçin Teşekkürler 💌*\n    *- Liza*' : '*🚀 X-Troid Working as a Chatbot!  *\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.liza off* _command to return to normal mode._\n\n*Thanks For Using 🚀 X-Troid 💌*\n    *- Liza*'
         if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
             await conn.sendMessage(conn.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
             await heroku.get(baseURI + '/formation').then(async (formation) => { 
@@ -327,7 +327,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         if (config.WORKTYPE == 'public') {
       
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                if (config.FULLEVA == 'true') {
+                if (config.AILIZA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
                     await conn.sendMessage(conn.user.jid, '*🚀 X-Troid Public Olarak Çalışıyor! *\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:private_ *komutunu kullanın.*\n\n*🚀 X-Troid Kullandığın İçin Teşekkürler 💌*', MessageType.text);
@@ -353,7 +353,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
             }
             else { 
-                if (config.FULLEVA == 'true') {
+                if (config.AILIZA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
                     await conn.sendMessage(conn.user.jid, '\n*🚀 X-Troid Working as Public! 👰*\n', MessageType.text);
@@ -382,7 +382,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         }
         else if (config.WORKTYPE == 'private') { 
             if (config.LANG == 'TR' || config.LANG == 'AZ') { 
-                if (config.FULLEVA == 'true') {
+                if (config.AILIZA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
                     await conn.sendMessage(conn.user.jid, '*🚀 X-Troid Private Olarak Çalışıyor!  *\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:public_ *komutunu kullanın.*\n\n*🚀 X-Troid Kullandığın İçin Teşekkürler 💌*', MessageType.text);
@@ -408,7 +408,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
             }
             else { 
-                if (config.FULLEVA == 'true') {
+                if (config.AILIZA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
                     await conn.sendMessage(conn.user.jid, '\n*🚀 X-Troid  Working as Private! 👰*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, use* _.setvar WORK_TYPE:public_\n\n*Thanks for using 🚀 X-Troid 💌*', MessageType.text);
