@@ -5,8 +5,8 @@
     "AUTHOR": "AsenaDev",
     "STRINGS": {
         "_asena": {
-            "COMMAND": "Command",
-            "DESC": "Description",
+            "COMMAND": "Cmd",
+            "DESC": "Desc",
             "EXAMPLE": "Example",
             "NOT_FOUND": "*I couldnt find a command like this*",
             "WARN": "Warn"
