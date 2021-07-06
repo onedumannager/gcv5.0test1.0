@@ -25,27 +25,26 @@ XTroid.addCommand({pattern: 'dem ?(.*)', fromMe: true, desc: DDO}, (async (messa
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
-        if (match[1] == '') {
+
             await message.client.toggleDisappearingMessages(message.jid, 604800);
             await message.client.sendMessage(message.jid,ONO,MessageType.text);
         }
         else {
             return await message.client.sendMessage(message.jid, UNQ, MessageType.text);
      
-        }}
+        }
 
     else if (match[1] == 'off') {
         var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
-        if (match[1] == '') {
             await message.client.toggleDisappearingMessages(message.jid, 0);
             await message.client.sendMessage(message.jid,ONOF,MessageType.text);
         }
         else {
             return await message.client.sendMessage(message.jid, UNQ, MessageType.text);
      
-        }}
+        }
 
 
 
