@@ -23,8 +23,7 @@
             "REMOVE_DESC": "මෙවලම ඉවත් කරයි.",
             "NEED_PLUGIN": "```කරුණාකර ප්ලගිනයක් ඇතුළත් කරන්න! උදා: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```සමහර විට ඔබ එවැනි මෙවලමක් ස්ථාපනය කර ඇති අතර සමහර විට නැත. නමුත් එය දැන් නොමැති බව විශ්වාසයි..```",
-            "DELETED": "*✅ සාර්ථකව මකා දමන ලදි
-!*"
+            "DELETED": "*✅ සාර්ථකව මකා දමන ලදි!*"
         },
         "admin": {
             "BAN_DESC": "කණ්ඩායමේ කෙනෙකු ඉවත් කරන්න.ඔහුගේ පණිවිඩයට ටැග් කරන්න.",
@@ -64,13 +63,13 @@
              "SECOND": "තත්පර"
         },
         "evaluators": {
-            "TERM_DESC": "Allows to run the command on the server's shell.",
-            "GIVE_ME_CODE": "*Give me a code!*"
+            "TERM_DESC": "සේවාදායකයේ විධානය ක්රියාත්මක කිරීමට ඉඩ දෙයි shell.",
+            "GIVE_ME_CODE": "*මට කේතයක් දෙන්න!*"
         },
         "nekobin": {
-            "NEKO_DESC": "Replied messages will be added to nekobin.com.",
-            "NEED_REPLY": "```Please reply to a message!```",
-            "MUST_TEXT": "```Please reply to any message```"
+            "NEKO_DESC": "පිළිතුරු එකතු කරන පණිවිඩ එකතු වේ nekobin.com වෙත",
+            "NEED_REPLY": "```කරුණාකර පණිවිඩයකට පිළිතුරු දෙන්න!```",
+            "MUST_TEXT": "```කරුණාකර ඕනෑම පණිවිඩයකට පිළිතුරු දෙන්න```"
         },
        "heroku": {
              "RESTART_DESC": "එක්ස්ට්‍රොයිඩ් නැවත ආරම්භ කරන්න",
@@ -83,7 +82,7 @@
              "PERCENTAGE": "ප්‍රතිශතය",
              "DYNO_LEFT": "ඉතිරිව ඇත",
               "SETVAR_DESC": "heroku config var සකසන්න",
-               "SET_SUCCESS": "සාර්ථකව set} ➜ {set ලෙස සකසන්න,"
+               "SET_SUCCESS": "සාර්ථකව set} ➜ {set ලෙස සකසන්න,",
               "KEY_VAL_MISSING": "යතුර හෝ අගය අස්ථානගත වී ඇත",
               "INVALID": "අවලංගු යතුර: අගය ආකෘතිය",
              "GETVAR_DESC": "හෙරොකු වින්‍යාසය ලබා ගන්න",
@@ -92,32 +91,32 @@
               "NOT_FOUND": "මෙම යතුර සඳහා ප්‍රතිඵල හමු නොවීය"          
         },
         "filters": {
-            "FILTER_DESC": "It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",
-            "NO_FILTER": "*❌ There are no filters in this chat!*",
-            "FILTERS": "*🔎 There is your filters in this chat:*",
-            "NEED_REPLY": "*❌ Please type in reply!*\n*Example:*",
-            "FILTERED": "*✅ Successfully set* ```{}``` *to filter!*",
-            "STOP_DESC": "Stops the filter you added previously.",
-            "NEED_FILTER": "*❌ Please type a filter!*\n*Example:*",
-            "ALREADY_NO_FILTER": "*❌ There is already no filter like this!*",
-            "DELETED": "*✅ The filter was successfully deleted!*"
+            "FILTER_DESC": "එය පෙරණයක් එක් කරයි.යමෙක් ඔබේ පෙරණය ලියනවා නම්, එය පිළිතුර යවයි.ඔබ ලියනවා නම් .ෆිල්ටර්, එය ඔබගේ පෙරහන් ලැයිස්තුව පෙන්වයි.",
+            "NO_FILTER": "*❌ මෙම කතාබහ තුළ පෙරහන් නොමැත!*",
+            "FILTERS": "*🔎 මෙම චැට් එකේ ඔබේ පෙරහන් තිබේ:*",
+            "NEED_REPLY": "*❌ කරුණාකර පිළිතුරු ටයිප් කරන්න!*\n*Example:*",
+            "FILTERED": "*✅ සාර්ථකව සකසන ලදී* ```{}``` *",
+            "STOP_DESC": "ඔබ කලින් එකතු කළ පෙරනය නවත්වයි.",
+            "NEED_FILTER": "*❌ කරුණාකර පෙරනයක් ටයිප් කරන්න!*\n*Example:*",
+            "ALREADY_NO_FILTER": "*❌ මේ වගේ පෙරනයක් දැනටමත් නැත!*",
+            "DELETED": "*✅ පෙරණය සාර්ථකව මකා දැමීය!*"
         },
         "greetings": {
-            "WELCOME_DESC": "It sets the welcome message. If you leave it blank it shows the welcome message.",
-            "NOT_SET_WELCOME": "*You don't set the welcome message yet.!*\n**To set:** ```.welcome your welcome message```",
-            "WELCOME_ALREADY_SETTED": "*✅ Welcome message already set!*\n*Message:* ```",
-            "NEED_WELCOME_TEXT": "*You must write a message to set up the welcome message.*\n*Example:* ```.welcome WELCOME!```",
-            "WELCOME_DELETED": "*✅ Welcome message has been deleted successfully!*",
-            "WELCOME_SETTED": "*✅ Welcome message has been set successfully!*",
-            "GOODBYE_DESC": "Sets the goodbye message. If you leave blank, it show's the goodbye message.",
-            "NOT_SET_GOODBYE": "*You didn't set a goodbye message!*\n*To set:* ```.goodbye Your Goodbye Message```",
-            "GOODBYE_ALREADY_SETTED": "*✅ Goodbye message has been set!*\n*Message:* ```",
-            "NEED_GOODBYE_TEXT": "*You must write a message to set up the goodbye message.*\n*Example:* ```.goodbye Goodbye!```",
-            "GOODBYE_DELETED": "*✅ Goodbye message has been deleted successfully!*",
-            "GOODBYE_SETTED": "*✅ Goodbye message has been setted successfully!*"
+            "WELCOME_DESC": "එය පිළිගැනීමේ පණිවිඩය සකසයි. ඔබ එය හිස්ව තැබුවහොත් එය පිළිගැනීමේ පණිවිඩය පෙන්වයි.",
+            "NOT_SET_WELCOME": "*ඔබ තවමත් පිළිගැනීමේ පණිවිඩය සකසන්නේ නැත.!*\n**To set:** ```.ඔබගේ පිළිගැනීමේ පණිවිඩය සාදරයෙන් පිළිගනිමු```",
+            "WELCOME_ALREADY_SETTED": "*✅ දැනටමත් සකසා ඇති පණිවිඩය දැනටමත්පණිවුඩයත!*\n*Message:* ```",
+            "NEED_WELCOME_TEXT": "*පිළිගැනීමේ පණිවිඩය සැකසීමට ඔබ පණිවිඩයක් ලිවිය යුතුය.*\n*උදාහරණයක්:* ```.welcome සාදරයෙන් පිළිගනිමු!```",
+            "WELCOME_DELETED": "*✅ පිළිගැනීමේ පණිවිඩය සාර්ථකව මකා දමා ඇත!*",
+            "WELCOME_SETTED": "*✅ පිළිගැනීමේ පණිවිඩය සාර්ථකව සකසා ඇත!*",
+            "GOODBYE_DESC": "ආයුබෝවන් පණිවිඩය සකසයි.ඔබ හිස්ව හැදෑරෙනවා නම්, එය හොඳ පණිවිඩය පෙන්වයි.",
+            "NOT_SET_GOODBYE": "*ඔබ සමුගැනීමේ පණිවිඩයක් නොතැබීය!*\n*To set:* ```.ඔබේ සමුගැනීම පණිවිඩය```",
+            "GOODBYE_ALREADY_SETTED": "*✅ සමුගැනීමේ පණිවිඩය සකසා ඇත!*\n*Messපණිවුඩය``",
+            "NEED_GOODBYE_TEXT": "*සමුගැනීමේ පණිවිඩය සැකසීමට ඔබ පණිවිඩයක් ලිවිය යුතුය.*\n*Exampඋදාහරණයක්`.goodbye සුබගමන්!```",
+            "GOODBYE_DELETED": "*✅ සමුගැනීමේපණිවිඩය සාර්ථකව මකා දමා ඇත!*",
+            "GOODBYE_SETTED": "*✅ සමුගැනීමේ පණිවිඩය සාර්ථකව සකසා ඇත!*"
         },
         "lydia": {
-            "ADDLYDIA_DESC": "Activates Lydia (AI) for the user.",
+            "ADDLYDIA_DESC": "පරිශීලකයා සඳහා ලිඩියා (AI) සක්රිය කරයි.",
             "NEED_REPLY": "```Please respond to a user's message!```",
             "COFFEEHOUSE": "```You haven't defined the Coffehouse API Key! ```",
             "ENABLED_LYDIA": "```Lydia has been activated for this user!```",
@@ -127,65 +126,65 @@
             "DISABLED": "```Lydia has been disabled for this user!```"
         },
         "memes": {
-            "MEMES_DESC": "Photo memes you replied to.",
-            "NEED_REPLY": "*Reply to a photo!*",
-            "DOWNLOADING": "```Downloading media & making meme...```"
+            "MEMES_DESC": "ඡායාරූප මේමස් ඔබ පිළිතුරු දුන්නා.",
+            "NEED_REPLY": "*ඡායාරූපයකට පිළිතුරු දෙන්න!*",
+            "DOWNLOADING": "```මාධ්ය බාගත කිරීම සහ මතක තබා ගැනීම...```"
         },
         "log": {
-            "LOG": "Saves the message you reply to your private number.",
-            "REPLY": "*Please Reply To Any Message!*",
-            "ANIM": "Does not support animated stickers!",
-            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
-            "USER": " From User Number \n",
-            "FROM": " From the group with ID, ",
-            "MSG": "Message: \n\n",
-            "SUC": "*Message Successfully Saved to LOG!*"
+            "LOG": "ඔබගේ පුද්ගලික අංකයට ඔබ පිළිතුරු දෙන පණිවිඩය ඉතිරි කරයි.",
+            "REPLY": "*කරුණාකර ඕනෑම පණිවිඩයකට පිළිතුරු දෙන්න!*",
+            "ANIM": "සජීවිකරණ ස්ටිකර් සඳහා සහාය නොදක්වයි!",
+            "HEAD": "```===== [ලොග් වූ පණිවිඩය] =====```\n\n",
+            "USER": " පරිශීලක අංකයෙන් \n",
+            "FROM": " හැඳුනුම්පත සහිත කණ්ඩායමෙන්, ",
+            "MSG": "පණිවුඩය: \n\n",
+            "SUC": "*ලොගය සඳහා සාර්ථකව සුරකින ලදි!*"
         },
         "ocr": {
-            "OCR_DESC": "Reads the text on the photo you have replied.",
-            "NEED_REPLY": "*Reply to a photo!*",
-            "DOWNLOADING": "```Media is downloading & reading...```",
-            "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
-            "RESULT": "*Language:* ```{}```\n*Here is what I read:* ```{}```"
+            "OCR_DESC": "ඔබ පිළිතුරු දුන් ඡායාරූපය පිළිබඳ පෙළ කියවයි.",
+            "NEED_REPLY": "*ඡායාරූපයකට පිළිතුරු දෙන්න!*",
+            "DOWNLOADING": "```මාධ්ය බාගත කිරීම සහ කියවීමයි...```",
+            "ERROR": "```මට මෙය කියවීමට නොහැකි විය :/```\n*දෝෂයකි:*```{}```",
+            "RESULT": "*භාෂාව:* ```{}```\n*Herමෙන්න මම කියවන දේ```{}```"
         },
         "profile": {
-            "KICKME_DESC": "It kicks you from the group you are using it in.",
-            "KICKME": "```Bye bye! I am going 🤠```",
-            "PP_DESC": "Makes the profile photo what photo you reply.",
-            "NEED_PHOTO": "*Give me a photo!*",
-            "PPING": "```Setting profile photo...```",
-            "BLOCK_DESC": "Block user.",
-            "UNBLOCK_DESC": "Unblock user.",
-            "BLOCKED": "blocked",
-            "UNBLOCKED": "unblocked",
-            "BLOCKED_UPPER": "Blocked!",
-            "UNBLOCKED_UPPER": "Unblocked.",
-            "NEED_USER": "Give me a user!",
-            "JID_DESC": "Giving user's JID.",
-            "JID": "```JID address of``` @{} ```: {}```",
-            "JID_CHAT": "```Chat's JID address: {}```"
+            "KICKME_DESC": "එය ඔබ එය භාවිතා කරන කණ්ඩායමෙන් ඔබට පයින් ගසයි.",
+            "KICKME": "```ගිහින් එන්නම්!මම යනවා🤠```",
+            "PP_DESC": "පැතිකඩ ඡායාරූපය ඔබ පිළිතුරු දෙන ඡායාරූපය කුමක්ද?.",
+            "NEED_PHOTO": "*මට ඡායාරූපයක් දෙන්න!*",
+            "PPING": "```පැතිකඩ ඡායාරූපය සැකසීම...```",
+            "BLOCK_DESC": "පරිශීලකයා අවහිර කරන්න.",
+            "UNBLOCK_DESC": "පරිශීලකයා අවහිර කරන්න.",
+            "BLOCKED": "අවහිර කර ඇත",
+            "UNBLOCKED": "අවහිර කර ඇත",
+            "BLOCKED_UPPER": "අවහිර කර ඇත!",
+            "UNBLOCKED_UPPER": "අවහිර කර ඇත.",
+            "NEED_USER": "මට පරිශීලකයෙකු දෙන්න!",
+            "JID_DESC": "පරිශීලකයාගේ ID ලබා දීම.",
+            "JID": "```ID අදාළ පරිශීලක කේතය``` @{} ```: {}``` Report කිරීමට XXX ",
+            "JID_CHAT": "```මෙහි චැට් ID කේතය: {}```"
         },
         "removebg": {
-            "REMOVEBG_DESC": "Removes the background of the photos.",
-            "NEED_PHOTO": "*photo thaa mister!*",
-            "NO_API_KEY": "*Api key illa aliyaa*\n```remove.bg login for apikey```",
-            "RBGING": "```Removing...```"
+            "REMOVEBG_DESC": "ඡායාරූපවල පසුබිම ඉවත් කරයි.",
+            "NEED_PHOTO": "*පින්තුරයකර රිප්ලයි එකක් දාන්න*",
+            "NO_API_KEY": "*Api Key එක ලබාදී නැත *\n```remove.bg මෙමගින් ලබාගන්න```",
+            "RBGING": "```පසුබිම ඉවත් කරමින්...```"
         },
         "scrapers": {
-            "TRANSLATE_DESC": "It translates with Google Translate. You must reply any message.",
-            "TRANSLATE_USAGE": ".trt tr it (From Turkish to Italian)",
-            "NEED_REPLY": "```Please reply to any message!```",
-            "LANG": "Language",
-            "FROM": "Translated Language",
-            "RESULT": "Translate",
-            "TRANSLATE_ERROR": "❌ An error occured while translating!*",
-            "CURRENCY_ERROR": "```Syntax error! Example: .currency 1 TRY USD```",
-            "INVALID_CURRENCY": "```Foreign currency transaction failed. You wrote wrong currency!```",
-            "UNKNOWN_ERROR": "```An error occurred. Foreign currency transaction failed!```",
-            "TTS_DESC": "It converts text to sound.",
-            "TTS_ERROR": "```Error, Speech example of your sentence couldn't be made!```",
-            "SONG_DESC": "Uploads the song you wrote.",
-            "NEED_TEXT_SONG": "*Please write a song!*\n*Example:* ```.song Naadan Vibe```",
+            "TRANSLATE_DESC": "එය ගූගල් පරිවර්තනය සමඟ පරිවර්තනය කරයි.ඔබ ඕනෑම පණිවිඩයකට පිළිතුරු දිය යුතුය.",
+            "TRANSLATE_USAGE": ".tr en si (ඉංගිසි සිංහලට)",
+            "NEED_REPLY": "```කරුණාකර ඕනෑම පණිවිඩයකට පිළිතුරු දෙන්න!```",
+            "LANG": "භාෂාව",
+            "FROM": "පරිවර්තනය කළ භාෂාව",
+            "RESULT": "පරිවර්තනය",
+            "TRANSLATE_ERROR": "❌ පරිවර්තනය කිරීමේදී දෝෂයක් ඇතිවිය!*",
+            "CURRENCY_ERROR": "```සින්ටැක්ස් දෝෂය!උදාහරණය:. Charrence 1 USD උත්සාහ කරන්න```",
+            "INVALID_CURRENCY": "```විදේශ මුදල් ගණන් සැකසීම අසාර්ථක විය.ඔබ වැරදි මුදල් ලිව්වා වියහැක!```",
+            "UNKNOWN_ERROR": "```දෝෂයක් ඇතිවිය.විදේශ මුදල් ගනුදෙනුව අසාර්ථක විය!```",
+            "TTS_DESC": "එය පෙළ ශබ්දයට පරිවර්තනය කරයි.",
+            "TTS_ERROR": "```Error, ඔබේ වාක්ය කථනයට පරිවර්තනය කළ නොහැක!```",
+            "SONG_DESC": "ගීත mp3 ලෙස ලබාගැනීමට.",
+            "NEED_TEXT_SONG": "*ගීතයක නමක් ලබාදෙන්න!*\n*Example:* ```.song පෙම් කවක් ලියු```",
             "NO_RESULT": "*I couldn't find anything :(*",
             "DOWNLOADING_SONG": "\n*Searching your song 🎶*\n",
             "UPLOADING_SONG": "\n*Uploading 📲 Use 🎧*\n",
@@ -193,7 +192,7 @@
             "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
             "DOWNLOADING_VIDEO": "```Downloading...```",
             "UPLOADING_VIDEO": "```Uploading...```",
-            "YT_DESC": "It searchs on YouTube.",
+            "YT_DESC": "Search on YouTube.",
             "NEED_WORDS": "```Please write a few words!```",
             "GETTING_VIDEOS": "```I'm bringing videos...```",
             "NOT_FOUND": "*Thappinokeett kittiyilla ☹️*",
