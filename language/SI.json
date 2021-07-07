@@ -185,49 +185,49 @@
             "TTS_ERROR": "```Error, ඔබේ වාක්ය කථනයට පරිවර්තනය කළ නොහැක!```",
             "SONG_DESC": "ගීත mp3 ලෙස ලබාගැනීමට.",
             "NEED_TEXT_SONG": "*ගීතයක නමක් ලබාදෙන්න!*\n*Example:* ```.song පෙම් කවක් ලියු```",
-            "NO_RESULT": "*I couldn't find anything :(*",
-            "DOWNLOADING_SONG": "\n*Searching your song 🎶*\n",
-            "UPLOADING_SONG": "\n*Uploading 📲 Use 🎧*\n",
-            "VIDEO_DESC": "Downloads video from YouTube.",
-            "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
-            "DOWNLOADING_VIDEO": "```Downloading...```",
-            "UPLOADING_VIDEO": "```Uploading...```",
-            "YT_DESC": "Search on YouTube.",
-            "NEED_WORDS": "```Please write a few words!```",
-            "GETTING_VIDEOS": "```I'm bringing videos...```",
-            "NOT_FOUND": "*Thappinokeett kittiyilla ☹️*",
-            "SEARCHING": "*🔎 Searching...*",
-            "WIKI_DESC": "Searches query on Wikipedia.",
-            "IMG_DESC": "Searches for related pics on Google.",
-            "IMG": "```Uploading photo``` *{}* ```number``` *{}*"
+            "NO_RESULT": "*මට කිසිවක් සොයාගත නොහැකි විය :(*",
+            "DOWNLOADING_SONG": "\n*ඔබේ ගීතය සොයමින්🎶....*\n",
+            "UPLOADING_SONG": "\n*🎶ගීතය හමුවුන ඔබ වෙත එවමින්...*\n",
+            "VIDEO_DESC": "යූ ටියුබ් වෙතින් වීඩියෝ බාගන්න.",
+            "NEED_VIDEO": "*කරුණාකර වීඩියෝ සබැඳියක් ලබාදෙන්න!*\n*Example:* ```.video https://youtu.be/ZoTgnUNASQo```",
+            "DOWNLOADING_VIDEO": "```බාගත කරමින්...```",
+            "UPLOADING_VIDEO": "```උඩුගත කරමින්...```",
+            "YT_DESC": "යූ ටියුබ් එකේ සොයන්න.",
+            "NEED_WORDS": "```කරුණාකර වචන කිහිපයක් ලියන්න!```",
+            "GETTING_VIDEOS": "```මම වීඩියෝ අරගෙන එන්නම්...```",
+            "NOT_FOUND": "*එවැනි යමක් සොයාගැනීමට නොහැකි ☹️*",
+            "SEARCHING": "*🔎 සොයමින...*",
+            "WIKI_DESC": "විකිපීඩියාවල ලිපි සෙවීමට.",
+            "IMG_DESC": "ගූගල් හි අදාළ පින්තූර සෙවීම.",
+            "IMG": "```ඡායාරූපය උඩුගත කිරීම``` *{}* ```number``` *{}*"
         },
         "sticker": {
-            "STICKER_DESC": "It converts your replied photo or video to sticker.",
-            "NEED_REPLY": "*Reply to a photo or video!*",
-            "DOWNLOADING": "```Nissaram 🤠```"
+            "STICKER_DESC": "එය ඔබගේ පිළිතුරු ඡායාරූපයක් හෝ වීඩියෝව ස්ටිකර් බවට පරිවර්තනය කරයි.",
+            "NEED_REPLY": "*ඡායාරූපයකට හෝ වීඩියෝවකට පිළිතුරු දෙන්න!*",
+            "DOWNLOADING": "```සටිකරය සදමින් 🤠```"
         },
         "system_stats": {
-            "ALIVE_DESC": "Does bot work?",
-            "SYSD_DESC": "Shows the system properties."
+            "ALIVE_DESC": "බොට් වැඩ කරනවාද??",
+            "SYSD_DESC": "පද්ධති ගුණාංග පෙන්වයි."
         },
         "tagall": {
-            "TAGALL_DESC": "Tags everyone in the group.",
-            "ADMİN": "*I am not admin in this group!*"
+            "TAGALL_DESC": "කණ්ඩායමේ සිටින සියල්ලන්ම ටැග් කරයි.",
+            "ADMİN": "*මෙහි ඔබට පරිපාලක තනතුරක් නැත!*"
         },
         "updater": {
-            "UPDATER_DESC": "Checks the update.",
-            "UPDATE": "*Your bot is completely up-to-date!*",
-            "NEW_UPDATE": "*Xtroid Update Available*\n\n please ask support group before updating. Otherwise chance to get error\n\nChanges:\n```",
-            "UPDATE_NOW_DESC": "It makes updates.",
-            "UPDATING": "```Updating..🐥```",
-            "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
-            "UPDATED": "*Updated 🤠✅*",
-            "UPDATED_LOCAL": "*✅ Successfully Updated!*",
-            "AFTER_UPDATE": "*🚀 Xtroid Restarting*"
+            "UPDATER_DESC": "යාවත්කාලීනය පරීක්ෂා කරයි.",
+            "UPDATE": "*ඔබේ බොට් සම්පූර්ණයෙන්ම යාවත්කාලීනවී ඇත!*",
+            "NEW_UPDATE": "*ඔබට අලුත් Update එකක් ලැබී ඇත*\n\n යාවත්කාලීන කිරීමට පෙර කරුණාකර සහායක කණ්ඩායමගෙන් විමසන්න.හෝ රාත්‍රී 10.00 න් පසුව යවත්කාලීන කරගන්න\n\nඅලුත්:\n```",
+            "UPDATE_NOW_DESC": "එය යාවත්කාලීන කිරීම් කරයි.",
+            "UPDATING": "```යාවත්කාලීන කරමින්..🐥```",
+            "INVALID_HEROKU": "*❌ ඔබේ හෙරෝකු තොරතුරු වැරදියි!*",
+            "UPDATED": "*යාවත්කාලින වීම සම්පුර්ණයි 🤠✅*",
+            "UPDATED_LOCAL": "*✅ නිවැරදි ලෙස යාවත්කාලින විය!*",
+            "AFTER_UPDATE": "*🚀 ලීසා නැවත පනගැන්වීම..*"
         },
         "weather": {
-            "WEATHER_DESC": "Shows the weather.",
-            "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather New Delhi```",
+            "WEATHER_DESC": "කාලගුණය පෙන්වයි.",
+            "NEED_LOCATION": "*Pකරුණාකර ස්ථානයක් ලියන්න*\n*Example:* ```.weather New Delhi```",
             "LOCATION": "Location",
             "LAT": "Lattitude",
             "LONG": "Longitude",
