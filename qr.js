@@ -6,7 +6,7 @@ const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/bailey
 const {StringSession} = require('./Xproject/');
 const fs = require('fs');
 
-async function whatsAsena () {
+async function LasiXtroid () {
     const conn = new WAConnection();
     const Session = new StringSession();  
     conn.version = [2,2121,7];
@@ -51,4 +51,4 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
     await conn.connect();
 }
 
-whatsAsena()
+LasiXtroid()
