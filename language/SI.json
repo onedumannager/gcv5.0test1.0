@@ -1,10 +1,10 @@
 {
-    "__ASENAJSON__": true,
+    "__XTROIDJSON__": true,
     "LANGUAGE": "English",
     "LANGCODE": "en",
-    "AUTHOR": "AsenaDev",
+    "AUTHOR": "XtroidDev",
     "STRINGS": {
-        "_asena": {
+        "_xtroid": {
             "COMMAND": "විධානය",
             "DESC": "විස්තරය",
             "EXAMPLE": "උදා:",

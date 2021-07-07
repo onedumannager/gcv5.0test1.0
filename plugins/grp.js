@@ -2,7 +2,7 @@ const XTroid = require('../events');
 const Config = require('../config');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const Language = require('../language');
-const Lang = Language.getString('_asena');
+const Lang = Language.getString('_xtroid');
 const axios = require('axios');
 
 if (Config.WORKTYPE == 'private') {
