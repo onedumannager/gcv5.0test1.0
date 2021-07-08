@@ -268,7 +268,7 @@ async function LasiXtroid () {
         console.log(`${chalk.green.bold('X-')}${chalk.blue.bold('Troid')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
-${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
+${chalk.blue.italic('🚀 Connecting to your xtroid... Please Wait.')}`);
     });
     conn.on('credentials-updated', async () => {
         console.log(
@@ -309,10 +309,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         );
         if (os.userInfo().homedir !== clh.pay) return;
         await new Promise(r => setTimeout(r, 200));
-        let afwhasena = config.WORKTYPE == 'public' ? ' Public' : ' Private'
-        console.log(chalk.bgGreen('🚀 X-Troid' + afwhasena));
+        let aftroid = config.WORKTYPE == 'public' ? ' Public' : ' Private'
+        console.log(chalk.bgGreen('🚀 X-Troid' + aftroid));
         await new Promise(r => setTimeout(r, 500));
-        let EVA_ACTİON = config.LANG == 'TR' || config.LANG == 'AZ' ? '*🚀 X-Troid Chatbot Olarak Çalışıyor!*  \n\n_Bu modun amacı botu tam fonksiyonel bir yapay zeka sohbet aracına çevirmektir._\n_Normal moda dönmek için_ *.liza off* _komutunu kullanabilirsiniz._\n\n*🚀 X-Troid Kullandığın İçin Teşekkürler 💌*\n    *- Liza*' : '*🚀 X-Troid Working as a Chatbot!  *\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.liza off* _command to return to normal mode._\n\n*Thanks For Using 🚀 X-Troid 💌*\n    *- Liza*'
+        let LIZA_ACTION = config.LANG == 'SI' || config.LANG == 'EN'? '*🚀 X-TOID චැට්බෝට් ලෙස ක්රියා කරයි!*  \n\nමෙම ප්රකාරයේ පරමාර්ථය වන්නේ bot සම්පුර්ණයෙන්ම ක්රියාකාරී කෘතිම බුද්ධියට හරවා ගැනීමයි.\n_කෘතීම බුද්ධිය ඉවත් කිරීමට_ *.liza off* _ඔබට ඔබේ විධානය භාවිතා කළ හැකිය._\n\n*🚀 X-Troid භාවිතා කිරීම ගැන ස්තූතියි තවත් තොරතුරු දැනගැනීමට  අපව ❗️❗️❗️ SUBSCRIBE ❗️❗️❗️කර තබාගන්න https://www.youtube.com/watch?v=mDnJ7q3S3eY 💌*\n    *- Liza*' : '*🚀 X-Troid Working as a Chatbot!  *\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.liza off* _command to return to normal mode._\n\n*Thanks For Using 🚀 X-Troid 💌*\n    *- Liza*'
         if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
             await conn.sendMessage(conn.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
             await heroku.get(baseURI + '/formation').then(async (formation) => { 
@@ -326,11 +326,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         }
         if (config.WORKTYPE == 'public') {
       
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+            if (config.LANG == 'SI' || config.LANG == 'EN') {
                 if (config.AILIZA == 'true') {
-                    await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
+                    await conn.sendMessage(conn.user.jid, LIZA_ACTION, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*🚀 X-Troid Public Olarak Çalışıyor! *\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:private_ *komutunu kullanın.*\n\n*🚀 X-Troid Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*🚀 X-Troid Public  ලෙස ක්රියා කරයි!  *\n\n_මෙය ඔබගේ ලොග් සටහන් අංකය බැවින් මෙහි එන පණිවුඩ සහා අවධානයෙන් සිටින්න._\n_ඔබට ඕනෑම චැට් එකක විධාන උත්සාහ කළ හැකිය නමුත් මෙහි නොකරන්න:)_\n\n*bot පොදු කිරීමට .වෙනස් කිරීමට* _.setvar WORK_TYPE: private_ *ඔබේ විධානය භාවිතා කරන්න.*\n\n*🚀 X-Troid භාවිතා කිරීම ගැන ස්තූතියි තවත් තොරතුරු දැනගැනීමට  අපව ❗️❗️❗️ SUBSCRIBE ❗️❗️❗️කර තබාගන්න https://www.youtube.com/watch?v=mDnJ7q3S3eY 💌* ', MessageType.text);
                 }
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -354,7 +354,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             else { 
                 if (config.AILIZA == 'true') {
-                    await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
+                    await conn.sendMessage(conn.user.jid, LIZA_ACTION, MessageType.text)
                 } else {
                     await conn.sendMessage(conn.user.jid, '\n*🚀 X-Troid Working as Public! 👰*\n', MessageType.text);
                 }               
@@ -383,9 +383,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         else if (config.WORKTYPE == 'private') { 
             if (config.LANG == 'TR' || config.LANG == 'AZ') { 
                 if (config.AILIZA == 'true') {
-                    await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
+                    await conn.sendMessage(conn.user.jid, LIZA_ACTION, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*🚀 X-Troid Private Olarak Çalışıyor!  *\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:public_ *komutunu kullanın.*\n\n*🚀 X-Troid Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*🚀 X-Troid Private  ලෙස ක්රියා කරයි!  *\n\n_මෙය ඔබගේ ලොග් සටහන් අංකය බැවින් මෙහි එන පණිවුඩ සහා අවධානයෙන් සිටින්න._\n_ඔබට ඕනෑම චැට් එකක විධාන උත්සාහ කළ හැකිය නමුත් මෙහි නොකරන්න:)_\n\n*bot පොදු කිරීමට .වෙනස් කිරීමට* _.setvar WORK_TYPE:public_ *ඔබේ විධානය භාවිතා කරන්න.*\n\n*🚀 X-Troid භාවිතා කිරීම ගැන ස්තූතියි තවත් තොරතුරු දැනගැනීමට  අපව ❗️❗️❗️ SUBSCRIBE ❗️❗️❗️කර තබාගන්න https://www.youtube.com/watch?v=mDnJ7q3S3eY 💌*', MessageType.text);
                 }
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -409,7 +409,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             else { 
                 if (config.AILIZA == 'true') {
-                    await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
+                    await conn.sendMessage(conn.user.jid, LIZA_ACTION, MessageType.text)
                 } else {
                     await conn.sendMessage(conn.user.jid, '\n*🚀 X-Troid  Working as Private! 👰*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, use* _.setvar WORK_TYPE:public_\n\n*Thanks for using 🚀 X-Troid 💌*', MessageType.text);
                 }
@@ -511,14 +511,15 @@ if (msg.messageStubType === 32 || msg.messageStubType === 28) {
     // Görüşürüz Mesajı
     var gb = await getMessage(msg.key.remoteJid, 'goodbye');
     if (gb !== false) {
-        await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
+        var lasiyasimg = await axios.get(`${Config.GIF_BYE}`, { responseType: 'arraybuffer' })
+        await conn.sendMessage(msg.key.remoteJid, Buffer.from(lasiyasimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message +'\n\n                 ᴾᵒʷᵉʳᵈ ᵇʸ ˣ⁻ᵀʳᵒᶦᵈ'});
     }
     return;
 } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
     // Hoşgeldin Mesajı
     var gb = await getMessage(msg.key.remoteJid);
     if (gb !== false) {
-var lasiyasimg = await axios.get(`https://netfile2link.herokuapp.com/9738`, { responseType: 'arraybuffer' })
+var lasiyasimg = await axios.get(`${Config.GIF_WEL}`, { responseType: 'arraybuffer' })
 await conn.sendMessage(msg.key.remoteJid, Buffer.from(lasiyasimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message +'\n\n                 ᴾᵒʷᵉʳᵈ ᵇʸ ˣ⁻ᵀʳᵒᶦᵈ'});
     }
     return;
