@@ -15,9 +15,10 @@ XTroid.addCommand({pattern: 'nlite ?(.*)', fromMe: true, dontAddCommandList: tru
 
     await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
     const { key1 } = ann.data.key
-    const ld = key1
-    const ky = "bGFzaXlh"
-    if (ld !== ky) return await message.sendMessage('need api');
+    const buff = Buffer.from(`${key1}`, 'base64');  
+    const one = buff.toString('utf-8');
+    const ky = "lasiya"
+    if (one !== ky) return await message.sendMessage('need api');
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html",
         `${match[1]}`
