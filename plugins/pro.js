@@ -54,8 +54,8 @@ XTroid.addCommand({pattern: 'glite ?(.*)', fromMe: true, dontAddCommandList: tru
 
 
 
-XTroid.addCommand({pattern: 'plux ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    lasiapi.textpro("https://textpro.me/color-full-luxury-metal-text-effect-969.html",
+XTroid.addCommand({pattern: 'ysteel ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/eroded-metal-text-effect-834.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -65,8 +65,93 @@ XTroid.addCommand({pattern: 'plux ?(.*)', fromMe: true, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/lizy/plux.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/plux.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              await download(`${data}`, '/root/lizy/ysteel.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ysteel.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+
+
+XTroid.addCommand({pattern: 'lxmas ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/create-a-christmas-holiday-snow-text-effect-1007.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/lxmas.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lxmas.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+
+
+XTroid.addCommand({pattern: 'lcloud ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/lcloud.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lcloud.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+
+
+
+XTroid.addCommand({pattern: 'l2xmas ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/xmas-cards-3d-online-942.html-metal-text-effect-834.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/l2xmas.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/l2xmas.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+
+
+XTroid.addCommand({pattern: 'lblood ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/blood-text-on-the-frosted-glass-941.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/lblood.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lblood.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -77,4 +162,113 @@ XTroid.addCommand({pattern: 'plux ?(.*)', fromMe: true, dontAddCommandList: true
 
 
 
+XTroid.addCommand({pattern: 'ltoxic ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/toxic-text-effect-online-901.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/ltoxic.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ltoxic.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+
+
+
+XTroid.addCommand({pattern: 'l2blood ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/horror-blood-text-effect-online-883.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/l2blood.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/l2blood.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+
+
+
+XTroid.addCommand({pattern: 'lcb ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/carbon-text-effect-833.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/lcb.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lcb.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+
+
+
+
+XTroid.addCommand({pattern: 'lux ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/3d-luxury-gold-text-effect-online-1003.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/lux.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lux.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+
+
+
+
+XTroid.addCommand({pattern: 'lgd ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lasiapi.textpro("https://textpro.me/hexa-golden-text-effect-842.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/lizy/lgd.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/lgd.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
 }
