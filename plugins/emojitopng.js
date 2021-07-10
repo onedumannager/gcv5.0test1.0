@@ -18,7 +18,7 @@ const iii = "Only work with emoji\n ඉමොජි පමණක් එවන්
 
 if (Config.WORKTYPE == 'private') {
 
-    XTroid.addCommand({pattern: 'png ?(.*)', fromMe: true, desc: des}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'png ?(.*)', fromMe: true, desc: des}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
@@ -30,7 +30,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    XTroid.addCommand({pattern: 'png ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'png ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
@@ -41,7 +41,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
 
-    XTroid.addCommand({pattern: 'png ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'png ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 

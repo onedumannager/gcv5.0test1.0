@@ -11,7 +11,7 @@ const LOADING = "Downloading the Video..."
 const NOT_FOUNDFB = "Video Not Found"
 const CAPTION = "Caption"
 
-XTroid.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (message, match) => {
+XTroid.addCMD({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (message, match) => {
 
     const userName = match[1]
 
@@ -50,7 +50,7 @@ XTroid.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (m
 
 
 
-XTroid.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (message, match) => {
+XTroid.addCMD({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (message, match) => {
 
     const userName = match[1]
 

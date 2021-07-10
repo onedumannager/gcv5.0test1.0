@@ -11,7 +11,7 @@ const Language = require('../language');
 const Lang = Language.getString('tagall');
 
 if (Config.WORKTYPE == 'private') {
-    XTroid.addCommand({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGADMİN}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGADMİN}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';
@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 }
 else if (Config.WORKTYPE == 'public') {
-    XTroid.addCommand({pattern: 'tagadmin', fromMe: false, desc: Lang.TAGADMİN}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'tagadmin', fromMe: false, desc: Lang.TAGADMİN}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';
@@ -37,7 +37,7 @@ else if (Config.WORKTYPE == 'public') {
         });
         await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }));
-    XTroid.addCommand({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGADMİN, dontAddCommandList: true}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGADMİN, dontAddCMDList: true}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';

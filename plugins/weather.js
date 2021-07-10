@@ -17,7 +17,7 @@ const Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 
-    XTroid.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
+    XTroid.addCMD({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
 
 	    if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
@@ -37,7 +37,7 @@ if (Config.WORKTYPE == 'private') {
 }	
 if (Config.WORKTYPE == 'public') {
 
-    XTroid.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
+    XTroid.addCMD({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
 
 	    if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
@@ -54,7 +54,7 @@ if (Config.WORKTYPE == 'public') {
 		    return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text);
 	    }
     });
-    XTroid.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false, dontAddCommandList: true}, async (message, match) => {
+    XTroid.addCMD({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false, dontAddCMDList: true}, async (message, match) => {
 
 	    if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;

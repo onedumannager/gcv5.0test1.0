@@ -5,7 +5,7 @@ const axios = require('axios');
 
 
 
-XTroid.addCommand({ pattern: 'random ?(.*)', fromMe: true, desc: 'word image' }, (async (message, match) => {
+XTroid.addCMD({ pattern: 'random ?(.*)', fromMe: true, desc: 'word image' }, (async (message, match) => {
 
     var r_text = new Array ();
 

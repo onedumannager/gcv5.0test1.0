@@ -18,7 +18,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 
-XTroid.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid, Lang.STOP_SPAM, MessageType.text);
 
@@ -29,7 +29,7 @@ XTroid.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC},
     });
 }));
 
-XTroid.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
+XTroid.addCMD({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
 
 
     if (match[1] === '') {

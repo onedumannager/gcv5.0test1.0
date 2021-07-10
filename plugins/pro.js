@@ -11,14 +11,13 @@ const need = "*type some word after command*\n*විධානයට පසු�
 
 
 if (Config.WORKTYPE == 'private') {   
-XTroid.addCommand({pattern: 'nlite ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'nlite ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
     const { key1 } = ann.data.key
-    const buff = Buffer.from(`${key1}`, 'base64');  
-    const one = buff.toString('utf-8');
-    const ky = "lasiya"
-    if (one !== ky) return await message.sendMessage('need api');
+    const lc = key1
+    const seed = "lasiya"
+    if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html",
         `${match[1]}`
@@ -37,13 +36,18 @@ XTroid.addCommand({pattern: 'nlite ?(.*)', fromMe: true, dontAddCommandList: tru
               console.log(err)
           } 
        
-    });
-});
+    });});
 }));
 
 
 
-XTroid.addCommand({pattern: 'glite ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'glite ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/green-neon-text-effect-874.html",
         `${match[1]}`
@@ -61,12 +65,18 @@ XTroid.addCommand({pattern: 'glite ?(.*)', fromMe: true, dontAddCommandList: tru
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
 
-XTroid.addCommand({pattern: 'ysteel ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ysteel ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/eroded-metal-text-effect-834.html",
         `${match[1]}`
@@ -84,11 +94,17 @@ XTroid.addCommand({pattern: 'ysteel ?(.*)', fromMe: true, dontAddCommandList: tr
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
-XTroid.addCommand({pattern: 'lxmas ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lxmas ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-a-christmas-holiday-snow-text-effect-1007.html",
         `${match[1]}`
@@ -106,11 +122,17 @@ XTroid.addCommand({pattern: 'lxmas ?(.*)', fromMe: true, dontAddCommandList: tru
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
-XTroid.addCommand({pattern: 'lcloud ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lcloud ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html",
         `${match[1]}`
@@ -128,12 +150,18 @@ XTroid.addCommand({pattern: 'lcloud ?(.*)', fromMe: true, dontAddCommandList: tr
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
 
-XTroid.addCommand({pattern: 'lblood ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lblood ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/blood-text-on-the-frosted-glass-941.html",
         `${match[1]}`
@@ -151,13 +179,19 @@ XTroid.addCommand({pattern: 'lblood ?(.*)', fromMe: true, dontAddCommandList: tr
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
 
 
-XTroid.addCommand({pattern: 'ltoxic ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'ltoxic ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/toxic-text-effect-online-901.html",
         `${match[1]}`
@@ -175,12 +209,18 @@ XTroid.addCommand({pattern: 'ltoxic ?(.*)', fromMe: true, dontAddCommandList: tr
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
 
-XTroid.addCommand({pattern: 'l2blood ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'l2blood ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/horror-blood-text-effect-online-883.html",
         `${match[1]}`
@@ -198,12 +238,18 @@ XTroid.addCommand({pattern: 'l2blood ?(.*)', fromMe: true, dontAddCommandList: t
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
 
-XTroid.addCommand({pattern: 'lcb ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lcb ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/carbon-text-effect-833.html",
         `${match[1]}`
@@ -221,13 +267,19 @@ XTroid.addCommand({pattern: 'lcb ?(.*)', fromMe: true, dontAddCommandList: true}
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
 
 
-XTroid.addCommand({pattern: 'lux ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lux ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/3d-luxury-gold-text-effect-online-1003.html",
         `${match[1]}`
@@ -245,13 +297,19 @@ XTroid.addCommand({pattern: 'lux ?(.*)', fromMe: true, dontAddCommandList: true}
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 
 
 
-XTroid.addCommand({pattern: 'lgd ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XTroid.addCMD({pattern: 'lgd ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+        const { key1 } = ann.data.key
+        const lc = key1
+        const seed = "lasiya"
+        if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/hexa-golden-text-effect-842.html",
         `${match[1]}`
@@ -269,7 +327,7 @@ XTroid.addCommand({pattern: 'lgd ?(.*)', fromMe: true, dontAddCommandList: true}
           } catch(err) { 
               console.log(err)
           } 
-    });
+    });});
 }));
 
 }
