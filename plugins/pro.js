@@ -11,7 +11,7 @@ const need = "*type some word after command*\n*විධානයට පසු�
 
 
 if (Config.WORKTYPE == 'private') {
-    var keys = await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/')
+    var keys =  axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/')
     const { key1 } = keys.data.key
     const pass = Buffer.from(`${key1}`, 'base64');  
     const one = pass.toString('utf-8');
