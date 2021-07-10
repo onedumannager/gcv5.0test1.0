@@ -5,19 +5,18 @@ const fs = require('fs');
 const Config = require('../config')
 const axios = require('axios')
 const request = require('request');
-const evil = ('lasiya');
 const need = "*type some word after command*\n*විධානයට පසුව වචනයක් ලියන්න"
 
 
+if (Config.WORKTYPE == 'private') {   
 
-if (Config.WORKTYPE == 'private') {
-    var keys =  axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
-    const { key1 } = ann.data.key
-    const pass = Buffer.from(`${key1}`, 'base64');  
-    const one = pass.toString('utf-8');
-})
 XTroid.addCommand({pattern: 'nlite ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    if (one !== evil) return;
+     await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
+    const { key1 } = ann.data.key
+    const ld = key1
+
+    const ky = "lasiya"
+    if (ld !== ky) return;
 
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html",
@@ -36,6 +35,7 @@ XTroid.addCommand({pattern: 'nlite ?(.*)', fromMe: true, dontAddCommandList: tru
           } catch(err) { 
               console.log(err)
           } 
+        });
     });
 }));
 
