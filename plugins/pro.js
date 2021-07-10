@@ -15,7 +15,7 @@ XTroid.addCommand({pattern: 'nlite ?(.*)', fromMe: true, dontAddCommandList: tru
     const { key1 } = ann.data.key
     const ld = key1
 
-    const ky = "lasiya"
+    const ky = "bGFzaXlh"
     if (ld !== ky) return;
 
     if (match[1] === '') return await message.sendMessage(need);
