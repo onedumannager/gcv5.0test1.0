@@ -10,12 +10,12 @@ var keees = axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153
     const { key1 } = ann.data.key
     const ld = key1
     const ky = "bGFzaXlh"
-    if (ld !== ky) return await message.sendMessage('need api');
+    
 
 
 if (Config.WORKTYPE == 'private') {   
 XTroid.addCommand({pattern: 'nlite ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-
+    if (ld !== ky) return await message.sendMessage('need api');
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html",
         `${match[1]}`
