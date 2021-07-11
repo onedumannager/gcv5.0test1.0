@@ -22,12 +22,6 @@ XTroid.addCMD({pattern: 'ptl ?(.*)', fromMe: true}, (async (message, match) => {
 
     var plug = await axios.get(`${match[1]}`, { responseType: 'arraybuffer' })
     var plugin_name = (match[1])
-    fs.writeFileSync('./plugins/' + plugin_name + '.js', Buffer.from(plug.data));
-    try {
-        require('./' + plugin_name);
-    } catch (e) {
-        fs.unlinkSync('/root/lizy/plugins/' + plugin_name + '.js')
-        return await message.sendMessage(Lang.INVALID_PLUGIN + ' ```' + e + '```');
-    }
-    
+
+    await download(`${plug}`, '/root/lizy/plugins/' + plugin_name + '.js',)
 }));
