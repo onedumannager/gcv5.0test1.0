@@ -16,12 +16,25 @@ const heroku = new Heroku({
 
 
 
-XTroid.addCMD({pattern: 'ptl ?(.*)', fromMe: true}, (async (message, match) => {
 
-    if (match[1] === '') return await message.sendMessage("need link");
 
-    var plug = await axios.get(`${match[1]}`, { responseType: 'arraybuffer' })
-    var plugin_name = (match[1])
 
-    await download(`${plug}`, '/root/lizy/plugins/' + plugin_name + '.js',)
+
+XTroid.addCMD({pattern: 'ptl ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+
+    await axios.get(`${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+var pl = (match[1])
+              await download(`${data}`, '/root/lizy/plugins/' + pl + '.js')
+          } catch(err) { 
+              console.log(err)
+          } 
+       
+    });
 }));
