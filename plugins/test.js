@@ -1,25 +1,33 @@
-
-const Asena = require('../events');
+const XTroid = require('../events');
+const Heroku = require('heroku-client');
+const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
-const Config = require('../config')
+const got = require('got');
+const fs = require('fs');
+const Db = require('./sql/plugin');
+
 const Language = require('../language');
-const Lang = Language.getString('filters');
-const pko = "mk pko"
-const pkk = "pkk2"
-if (Config.WORKTYPE == 'private') {
+const Lang = Language.getString('_plugin');
+const NLang = Language.getString('updater');
 
-    
-Asena.addCMD({on: 'text', fromMe: false }, (async (message, match) => {
-
-        if (!!message.mention && message.mention[0] == '94702102324@s.whatsapp.net') {
-await message.client.sendMessage(message.jid,pkk)
-        }
-const array = ['name']
-array.map( async (a) => {
-let pattern = new RegExp(`\\b${a}\\b`, 'g');
-if(pattern.test(message.message)){
-       await message.client.sendMessage(message.jid,pko )
-}
+const heroku = new Heroku({
+    token: Config.HEROKU.API_KEY
 });
+
+
+
+XTroid.addCMD({pattern: 'ptl ?(.*)', fromMe: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.sendMessage("need link");
+
+    var plug = await axios.get(`${match[1]}`, { responseType: 'arraybuffer' })
+    var plugin_name = (match[1])
+    fs.writeFileSync('./plugins/' + plugin_name + '.js', Buffer.from(plug.data));
+    try {
+        require('./' + plugin_name);
+    } catch (e) {
+        fs.unlinkSync('/root/lizy/plugins/' + plugin_name + '.js')
+        return await message.sendMessage(Lang.INVALID_PLUGIN + ' ```' + e + '```');
+    }
+    
 }));
-}

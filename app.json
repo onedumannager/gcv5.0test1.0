@@ -146,6 +146,15 @@
             "required": false,
             "value": "default"
         },
+        "LOCK": {
+            "description": "Skip this (under construct yet);මෙය මගහරින්න",
+            "required": false,
+            "value": "******"
+        },
+        "LOCKR": {
+            "description": "Skip this (under construct yet);මෙය මගහරින්න",
+            "required": false
+        },
         "GAN_IMAGE": {
             "description": "Type image link for Gan Style plugin.",
             "required": true,
@@ -164,3 +173,4 @@
       "url": "heroku-community/apt"
       }]
   }
+  
