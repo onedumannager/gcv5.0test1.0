@@ -13,7 +13,7 @@ const Lang = Language.getString('weather');
 
 
 if (Config.WORKTYPE == 'private') {
-XTroid.addCMD({pattern: 'news ?(.*)', fromMe: true, desc: Lang.NEWS_DESC}, async (message, match) => {
+XTroid.addCommand({pattern: 'news ?(.*)', fromMe: true, desc: Lang.NEWS_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_CATEGORY);
 	const url = `https://inshortsapi.vercel.app/news?category=${match[1]}`;
 	try {
@@ -62,7 +62,7 @@ XTroid.addCMD({pattern: 'news ?(.*)', fromMe: true, desc: Lang.NEWS_DESC}, async
 
 else if (Config.WORKTYPE == 'public') {
 	
-	XTroid.addCMD({pattern: 'news ?(.*)', fromMe: false, desc: Lang.NEWS_DESC}, async (message, match) => {
+	XTroid.addCommand({pattern: 'news ?(.*)', fromMe: false, desc: Lang.NEWS_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_CATEGORY);
 	const url = `https://inshortsapi.vercel.app/news?category=${match[1]}`;
 	try {

@@ -38,7 +38,7 @@ const convertToWav = file => {
 
 if (conf.WORKTYPE == 'private') {
 
-    XTroid.addCMD({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true }, (async (message, match) => {
 
         try {
             if (message.reply_message) {
@@ -77,7 +77,7 @@ if (conf.WORKTYPE == 'private') {
 }
 if (conf.WORKTYPE == 'public') {
 
-    XTroid.addCMD({ pattern: 'voicy', desc: Lang.USAGE, fromMe: false }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: false }, (async (message, match) => {
 
         try {
             if (message.reply_message) {
@@ -113,7 +113,7 @@ if (conf.WORKTYPE == 'public') {
 
 
     }));
-    XTroid.addCMD({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true, dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         try {
             if (message.reply_message) {

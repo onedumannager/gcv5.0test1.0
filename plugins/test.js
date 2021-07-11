@@ -9,7 +9,7 @@ const pkk = "pkk2"
 if (Config.WORKTYPE == 'private') {
 
     
-Asena.addCMD({on: 'text', fromMe: false }, (async (message, match) => {
+Asena.addCommand({on: 'text', fromMe: false }, (async (message, match) => {
 
         if (!!message.mention && message.mention[0] == '94702102324@s.whatsapp.net') {
 await message.client.sendMessage(message.jid,pkk)

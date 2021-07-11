@@ -10,7 +10,7 @@ WhatsAsena - Yusuf Usta
 var config = require('./config');
 var Commands = [];
 
-function addCMD(info, func) {
+function addCommand(info, func) {
     // Basit bir fonksiyon, komut eklemek için.
     var types = ['photo', 'image', 'text', 'message'];
 
@@ -22,7 +22,7 @@ function addCMD(info, func) {
         deleteCommand: info['deleteCommand'] === undefined ? true : info['deleteCommand'],
         desc: info['desc'] === undefined ? '' : info['desc'],
         usage: info['usage'] === undefined ? '' : info['usage'],
-        dontAddCMDList: info['dontAddCMDList'] === undefined ? false : info['dontAddCMDList'],
+        dontAddCommandList: info['dontAddCommandList'] === undefined ? false : info['dontAddCommandList'],
         warn: info['warn'] === undefined ? '' : info['warn'],
         function: func
     };
@@ -45,6 +45,6 @@ function addCMD(info, func) {
 }
 
 module.exports = {
-    addCMD: addCMD,
+    addCommand: addCommand,
     commands: Commands
 }

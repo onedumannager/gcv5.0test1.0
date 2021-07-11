@@ -17,7 +17,7 @@ const code = "╔════════════════════╗
 if (Config.WORKTYPE == 'private') {
 	
 	
-	      XTroid.addCMD({pattern: 'mpack', fromMe: true, desc: Ln,}, (async (message, match) => {
+	      XTroid.addCommand({pattern: 'mpack', fromMe: true, desc: Ln,}, (async (message, match) => {
 
    		 await message.client.sendMessage(
   
@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
   
   }));
 
-    XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
+    XTroid.addCommand({pattern: 'meme ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {   
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
         var topText, bottomText;
@@ -61,7 +61,7 @@ if (Config.WORKTYPE == 'private') {
         });
     }));
 	
-	XTroid.addCMD({ pattern: 'bocca ?(.*)', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
+	XTroid.addCommand({ pattern: 'bocca ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -71,7 +71,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
   
-     XTroid.addCMD({ pattern: 'mymeme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
+     XTroid.addCommand({ pattern: 'mymeme ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -80,7 +80,7 @@ if (Config.WORKTYPE == 'private') {
         await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
 
     }));
-       XTroid.addCMD({ pattern: 'santha ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
+       XTroid.addCommand({ pattern: 'santha ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -90,7 +90,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
   
-      XTroid.addCMD({ pattern: 'chaina ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+      XTroid.addCommand({ pattern: 'chaina ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -100,7 +100,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
   
-        XTroid.addCMD({ pattern: 'bomu ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+        XTroid.addCommand({ pattern: 'bomu ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -110,7 +110,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
   
-  XTroid.addCMD({ pattern: 'saduni ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+  XTroid.addCommand({ pattern: 'saduni ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
   if (match[1] === '') return await message.sendMessage(ll);
 
@@ -120,7 +120,7 @@ if (Config.WORKTYPE == 'private') {
 
 }));
   
-  XTroid.addCMD({ pattern: 'tharindu ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+  XTroid.addCommand({ pattern: 'tharindu ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
   if (match[1] === '') return await message.sendMessage(ll);
 
@@ -136,7 +136,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    XTroid.addCMD({pattern: 'meme', fromMe: false, desc: Ln,}, (async (message, match) => {
+    XTroid.addCommand({pattern: 'meme', fromMe: false, desc: Ln,}, (async (message, match) => {
 
         await message.client.sendMessage(
       
@@ -144,7 +144,7 @@ else if (Config.WORKTYPE == 'public') {
       
       }));
 
-      XTroid.addCMD({ pattern: 'bocca ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
+      XTroid.addCommand({ pattern: 'bocca ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -154,7 +154,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
   
-       XTroid.addCMD({ pattern: 'mymeme ?(.*)', fromMe: false , dontAddCMDList: true}, (async (message, match) => {
+       XTroid.addCommand({ pattern: 'mymeme ?(.*)', fromMe: false , dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -163,7 +163,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
 
     }));
-       XTroid.addCMD({ pattern: 'santha ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
+       XTroid.addCommand({ pattern: 'santha ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -173,7 +173,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
   
-        XTroid.addCMD({ pattern: 'chaina ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
+        XTroid.addCommand({ pattern: 'chaina ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -183,7 +183,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
   
-          XTroid.addCMD({ pattern: 'bomu ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
+          XTroid.addCommand({ pattern: 'bomu ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -193,7 +193,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
   
-  XTroid.addCMD({ pattern: 'saduni ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
+  XTroid.addCommand({ pattern: 'saduni ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
   if (match[1] === '') return await message.sendMessage(ll);
 
@@ -203,7 +203,7 @@ else if (Config.WORKTYPE == 'public') {
 
 }));
   
-  XTroid.addCMD({ pattern: 'tharindu ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
+  XTroid.addCommand({ pattern: 'tharindu ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
   if (match[1] === '') return await message.sendMessage(ll);
 
@@ -213,7 +213,7 @@ else if (Config.WORKTYPE == 'public') {
 
 }));
 
-XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {    
+XTroid.addCommand({pattern: 'meme ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
     if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
     var topText, bottomText;
@@ -256,7 +256,7 @@ XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: false, dontAddCMDList: true}, (asy
 
 
 
-XTroid.addCMD({pattern: 'mpack', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
+XTroid.addCommand({pattern: 'mpack', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
     await message.client.sendMessage(
 
@@ -264,7 +264,7 @@ XTroid.addCMD({pattern: 'mpack', fromMe: true, dontAddCMDList: true }, (async (m
 
 }));
 
-XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
+XTroid.addCommand({pattern: 'meme ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {   
 
 if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
 var topText, bottomText;
@@ -300,7 +300,7 @@ memeMaker({
 });
 }));
 
-XTroid.addCMD({ pattern: 'bocca ?(.*)', fromMe: true, dontAddCMDList: true }, (async (message, match) => {
+XTroid.addCommand({ pattern: 'bocca ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
 if (match[1] === '') return await message.sendMessage(ll);
 
@@ -310,7 +310,7 @@ await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mim
 
 }));
 
-XTroid.addCMD({ pattern: 'mymeme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCommand({ pattern: 'mymeme ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
 
 if (match[1] === '') return await message.sendMessage(ll);
 
@@ -319,7 +319,7 @@ var lasiyasimg = await axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?t
 await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
 
 }));
-XTroid.addCMD({ pattern: 'santha ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCommand({ pattern: 'santha ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
 
 if (match[1] === '') return await message.sendMessage(ll);
 
@@ -329,7 +329,7 @@ await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mim
 
 }));
 
-XTroid.addCMD({ pattern: 'chaina ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCommand({ pattern: 'chaina ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
 if (match[1] === '') return await message.sendMessage(ll);
 
@@ -339,7 +339,7 @@ await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mim
 
 }));
 
-XTroid.addCMD({ pattern: 'bomu ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCommand({ pattern: 'bomu ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
 if (match[1] === '') return await message.sendMessage(ll);
 
@@ -349,7 +349,7 @@ await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mim
 
 }));
 
-XTroid.addCMD({ pattern: 'saduni ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCommand({ pattern: 'saduni ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
 if (match[1] === '') return await message.sendMessage(ll);
 
@@ -359,7 +359,7 @@ await message.sendMessage(Buffer.from(lasiyasimg.data), MessageType.image, { mim
 
 }));
 
-XTroid.addCMD({ pattern: 'tharindu ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCommand({ pattern: 'tharindu ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
 if (match[1] === '') return await message.sendMessage(ll);
 

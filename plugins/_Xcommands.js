@@ -15,12 +15,12 @@ const Lang = Language.getString('_xtroid');
 
 if (Config.WORKTYPE == 'private') {
 
-    XTroid.addCMD({pattern: 'x ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
         XTroid.commands.map(
             async (command) =>  {
-                if (command.dontAddCMDList || command.pattern === undefined) return;
+                if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
                     var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                 } catch {
@@ -49,7 +49,7 @@ if (Config.WORKTYPE == 'private') {
         var CMD_HELP = '';
         XTroid.commands.map(
             async (command) =>  {
-                if (command.dontAddCMDList || command.pattern === undefined) return;
+                if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
                     var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                 } catch {
@@ -83,12 +83,12 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    XTroid.addCMD({pattern: 'x ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {
+    XTroid.addCommand({pattern: 'x ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
         XTroid.commands.map(
             async (command) =>  {
-                if (command.dontAddCMDList || command.pattern === undefined) return;
+                if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
                     var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                 } catch {
@@ -117,7 +117,7 @@ else if (Config.WORKTYPE == 'public') {
         var CMD_HELP = '';
         XTroid.commands.map(
             async (command) =>  {
-                if (command.dontAddCMDList || command.pattern === undefined) return;
+                if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
                     var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                 } catch {
@@ -147,12 +147,12 @@ else if (Config.WORKTYPE == 'public') {
     }
 }));
 
-XTroid.addCMD({pattern: 'x ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+XTroid.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
         XTroid.commands.map(
             async (command) =>  {
-                if (command.dontAddCMDList || command.pattern === undefined) return;
+                if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
                     var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                 } catch {
@@ -181,7 +181,7 @@ XTroid.addCMD({pattern: 'x ?(.*)', fromMe: true, dontAddCMDList: true}, (async (
         var CMD_HELP = '';
         XTroid.commands.map(
             async (command) =>  {
-                if (command.dontAddCMDList || command.pattern === undefined) return;
+                if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
                     var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                 } catch {

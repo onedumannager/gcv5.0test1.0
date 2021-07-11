@@ -9,7 +9,7 @@ const {MessageType, MessageOptions, Mimetype, Presence} = require('@adiwajshing/
 const Language = require('../language');
 const Lang = Language.getString('scam');
 
-XTroidd.addCMD({pattern: 'scam ?(.*)', fromMe: true, desc: Lang.SCAM_DESC}, (async (message, match) => {
+XTroidd.addCommand({pattern: 'scam ?(.*)', fromMe: true, desc: Lang.SCAM_DESC}, (async (message, match) => {
 
     if (match[1] === '') {
 

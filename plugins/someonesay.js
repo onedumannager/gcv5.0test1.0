@@ -12,7 +12,7 @@ const Lang = Language.getString('ttp');
 
 if (Config.WORKTYPE == 'private') {
 
-    XTroid.addCMD({ pattern: 'animesay ?(.*)', fromMe: true, desc: Lang.ANIME_DESC }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'animesay ?(.*)', fromMe: true, desc: Lang.ANIME_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -22,7 +22,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    XTroid.addCMD({ pattern: 'changesay ?(.*)', fromMe: true, desc: Lang.CHANGE_DESC }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'changesay ?(.*)', fromMe: true, desc: Lang.CHANGE_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    XTroid.addCMD({ pattern: 'trumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -44,7 +44,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    XTroid.addCMD({ pattern: 'animesay ?(.*)', fromMe: false, desc: Lang.ANIME_DESC }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'animesay ?(.*)', fromMe: false, desc: Lang.ANIME_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -54,7 +54,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    XTroid.addCMD({ pattern: 'changesay ?(.*)', fromMe: false, desc: Lang.CHANGE_DESC }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'changesay ?(.*)', fromMe: false, desc: Lang.CHANGE_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -64,7 +64,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    XTroid.addCMD({ pattern: 'trumpsay ?(.*)', fromMe: false, desc: Lang.TRUMP_DESC }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, desc: Lang.TRUMP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -73,7 +73,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(lasiyasimg.data), MessageType.image, { mimetype: Mimetype.png, caption: Config.CAPTION_KEY  })
 
     }));
-    XTroid.addCMD({ pattern: 'animesay ?(.*)', fromMe: true, desc: Lang.ANIME_DESC, dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'animesay ?(.*)', fromMe: true, desc: Lang.ANIME_DESC, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -83,7 +83,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    XTroid.addCMD({ pattern: 'changesay ?(.*)', fromMe: true, desc: Lang.CHANGE_DESC, dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'changesay ?(.*)', fromMe: true, desc: Lang.CHANGE_DESC, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -93,7 +93,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    XTroid.addCMD({ pattern: 'trumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC, dontAddCMDList: true }, (async (message, match) => {
+    XTroid.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
