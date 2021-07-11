@@ -16,6 +16,12 @@ const Heroku = require('heroku-client');
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
+const IMdsc = "You can turn on/off .img commad"
+const ALIMGON = "already on : කලින්ම ලබාදී ඇත"
+const ALIMGOF = "already off : කලින්ම වසාදමා ඇත"
+const SUON = "Successfully .img on command: සාර්ථකව අවසර ලබාදෙන ලදී "
+const SUOF = "Successfully .img off command: සාර්ථකව අවහිර කරන ලදී "
+const IMDC = "you tuerned off .img command plz tuern on *.cimg on*"
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 //============================== LYRICS =============================================
 const axios = require('axios');
@@ -131,6 +137,35 @@ if (config.LANG == 'RU') {
     dlang_input = 'Обработанный текст:'
 }
 
+XTroid.addCMD({pattern: 'cimg ?(.*)', fromMe: true, desc: IMdsc, usage: '.cimg on / off' }, (async (message, match) => {
+    const imgsw = `${config.IMG}`
+    if (match[1] == 'on') {
+        if (imgsw == 'true') {
+            return await message.client.sendMessage(message.jid, '*' + ALIMGON + '*', MessageType.text)
+        }
+        else {
+            await heroku.patch(baseURI + '/config-vars', { 
+                body: { 
+                    ['IMG']: 'true'
+                } 
+            });
+            await message.client.sendMessage(message.jid, '*' + SUON + '*', MessageType.text)
+        }
+    }
+    else if (match[1] == 'off') {
+        if (imgsw !== 'true') {
+            return await message.client.sendMessage(message.jid, '*' + ALIMGOF + '*', MessageType.text)
+        }
+        else {
+            await heroku.patch(baseURI + '/config-vars', { 
+                body: { 
+                    ['IMG']: 'false'
+                } 
+            });
+            await message.client.sendMessage(message.jid, '*' + SUOF + '*', MessageType.text)
+        }
+    }
+}));
 
 if (config.WORKTYPE == 'private') {
 
@@ -343,6 +378,7 @@ if (config.WORKTYPE == 'private') {
             }
         }
     }));
+
     XTroid.addCMD({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
@@ -542,6 +578,7 @@ if (config.WORKTYPE == 'private') {
     }));
 
     XTroid.addCMD({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
+        if (config.IMG !== false) return await message.sendMessage(IMDC);
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {

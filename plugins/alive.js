@@ -1,50 +1,11 @@
-/*
-*/
-
-const XTroid = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
-const {spawnSync} = require('child_process');
-const Config = require('../config');
-const chalk = require('chalk');
+const Asena = require('../events');
+const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
+const Config = require('../config');
+let FM = Config.WORKTYPE == 'public' ? false : true
 
-const Language = require('../language');
-const Lang = Language.getString('system_stats');
+Asena.addCommand({pattern: 'alive', fromMe: FM, deleteCommand: true,}, (async (message, match) => {
 
-
-if (Config.WORKTYPE == 'private') {
-
-    XTroid.addCMD({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-        
-        let pp
-        try {
-             pp = await message.client.getProfilePicture(
-                message.jid.includes('-') ? message.data.participant : message.jid ); } 
-             
-             catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) =>
-         { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: "\n»»————　♔　———-««\n" + Config.ALIVEMSG });
-    
-    });
+var lasi = await axios.get(`${Config.ALIVEIMG}`, { responseType: 'arraybuffer' })
+await message.client.sendMessage(message.jid, Buffer.from(lasi.data), MessageType.image, {mimetype: Mimetype.png, caption: '            '+Config.ALIVETEXT+'\n          ᴾᵒʷᵉʳᵈ ᵇʸ ˣ⁻ᵀʳᵒᶦᵈ'})
     }));
-
-}
-else if (Config.WORKTYPE == 'public') {
-
-   XTroid.addCMD({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-        
-        let pp
-
-        try {
-             pp = await message.client.getProfilePicture(
-                 message.jid.includes('-') ? message.data.participant : message.jid ); } 
-                 
-                 catch {
-                      pp = await message.client.getProfilePicture(); }
-
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) =>
-         { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: "\n»»————　♔　———-««\n" + Config.ALIVEMSG });
-         });
-    }));
- 
-}
