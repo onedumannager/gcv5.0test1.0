@@ -5,7 +5,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 const fs = require('fs');
 const Db = require('./sql/plugin');
-
+const axios = require('axios')
 const Language = require('../language');
 const Lang = Language.getString('_plugin');
 const NLang = Language.getString('updater');
