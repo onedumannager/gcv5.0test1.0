@@ -9,7 +9,7 @@ const Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 	
-XTroid.addCommand({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
+XTroid.addCMD({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
 	try {
@@ -26,7 +26,7 @@ XTroid.addCommand({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, 
 }
 else if (Config.WORKTYPE == 'public') {
 	
-XTroid.addCommand({pattern: 'hpmod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
+XTroid.addCMD({pattern: 'hpmod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
 	try {
@@ -41,7 +41,7 @@ XTroid.addCommand({pattern: 'hpmod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC,
 	}
 });
 
-XTroid.addCommand({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
+XTroid.addCMD({pattern: 'hpmod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCMDList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
 	try {

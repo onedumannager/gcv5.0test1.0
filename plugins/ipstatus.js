@@ -22,7 +22,7 @@ const NOT_FOUNDIP = "```Sorry,I could not your IP 😖```"
 
 if (Config.WORKTYPE == 'private') {
 
-  XTroid.addCommand({pattern: 'net ?(.*)', desc: 'gives you the detail of your IP' ,fromMe: true}, async (message, match) => {
+  XTroid.addCMD({pattern: 'net ?(.*)', desc: 'gives you the detail of your IP' ,fromMe: true}, async (message, match) => {
 	
     if (message.jid === '905524317852-1612300121@g.us') {
 
@@ -54,7 +54,7 @@ if (Config.WORKTYPE == 'private') {
 }	
 else if (Config.WORKTYPE == 'public') {
 
-  XTroid.addCommand({pattern: 'net ?(.*)', desc: 'gives you the detail of your IP' ,fromMe: false}, async (message, match) => {
+  XTroid.addCMD({pattern: 'net ?(.*)', desc: 'gives you the detail of your IP' ,fromMe: false}, async (message, match) => {
 	
     if (message.jid === '905524317852-1612300121@g.us') {
 
@@ -85,7 +85,7 @@ else if (Config.WORKTYPE == 'public') {
  });
 
 
- XTroid.addCommand({pattern: 'net ?(.*)' ,fromMe: true,dontAddCommandList: true }, async (message, match) => {
+ XTroid.addCMD({pattern: 'net ?(.*)' ,fromMe: true,dontAddCMDList: true }, async (message, match) => {
 	
   if (message.jid === '905524317852-1612300121@g.us') {
 

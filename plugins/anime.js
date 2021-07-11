@@ -17,7 +17,7 @@ const need = "*type some word after command*\n*විධානයට පසු�
 
 if (Config.WORKTYPE == 'private') {
 
-    XTroid.addCommand({ pattern: 'anime ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'anime ?(.*)', fromMe: true,dontAddCMDList: true }, (async (message, match) => {
 
         var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 
@@ -28,7 +28,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    XTroid.addCommand({ pattern: 'anime ?(.*)', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'anime ?(.*)', fromMe: false,dontAddCMDList: true }, (async (message, match) => {
 
         var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 
@@ -36,7 +36,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    XTroid.addCommand({ pattern: 'anime ?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+    XTroid.addCMD({ pattern: 'anime ?(.*)', fromMe: true,dontAddCMDList: true }, (async (message, match) => {
 
         var lasiyasimg = await axios.get(`https://bx-${Config.ON}.herokuapp.com/api/sfw/waifu?apikey=${Config.CCN}`, { responseType: 'arraybuffer' })
 

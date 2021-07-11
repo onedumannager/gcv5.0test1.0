@@ -14,7 +14,7 @@ const Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 
-    XTroid.addCommand({pattern: 'sim ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
+    XTroid.addCMD({pattern: 'sim ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://api.simsimi.net/v1/?text=${match[1]}&lang=en&cf=true`;
 	try {
@@ -28,7 +28,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    XTroid.addCommand({pattern: 'sim ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
+    XTroid.addCMD({pattern: 'sim ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://api.simsimi.net/v1/?text=${match[1]}&lang=en&cf=true`;
 	try {

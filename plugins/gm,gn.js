@@ -7,7 +7,7 @@ const Config = require('../config');
 
 
 if (Config.WORKTYPE == 'private') {
-XTroid.addCommand({pattern: 'gm', fromMe: true, deleteCommand: true, desc: GM,}, (async (message, match) => {
+XTroid.addCMD({pattern: 'gm', fromMe: true, deleteCommand: true, desc: GM,}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -28,7 +28,7 @@ XTroid.addCommand({pattern: 'gm', fromMe: true, deleteCommand: true, desc: GM,},
     }));
 
 
-XTroid.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true, desc: GN,}, (async (message, match) => {
+XTroid.addCMD({pattern: 'gn', fromMe: true, deleteCommand: true, desc: GN,}, (async (message, match) => {
 
         var r_text = new Array ();
     
@@ -51,7 +51,7 @@ XTroid.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true, desc: GN,},
     
 
     if (Config.WORKTYPE == 'public') {
-        XTroid.addCommand({pattern: 'gm', fromMe: false, deleteCommand: true, desc: GM,}, (async (message, match) => {
+        XTroid.addCMD({pattern: 'gm', fromMe: false, deleteCommand: true, desc: GM,}, (async (message, match) => {
         
             var r_text = new Array ();
         
@@ -72,7 +72,7 @@ XTroid.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true, desc: GN,},
             }));
         
         
-        XTroid.addCommand({pattern: 'gn', fromMe: false, deleteCommand: true, desc: GN,}, (async (message, match) => {
+        XTroid.addCMD({pattern: 'gn', fromMe: false, deleteCommand: true, desc: GN,}, (async (message, match) => {
         
                 var r_text = new Array ();
             
@@ -90,7 +90,7 @@ XTroid.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true, desc: GN,},
                     message.jid,(r_text[i]), MessageType.text);
             
                 }));    
-                XTroid.addCommand({pattern: 'gm', fromMe: true, deleteCommand: true,dontAddCommandList: true }, (async (message, match) => {
+                XTroid.addCMD({pattern: 'gm', fromMe: true, deleteCommand: true,dontAddCMDList: true }, (async (message, match) => {
         
                     var r_text = new Array ();
                 
@@ -111,7 +111,7 @@ XTroid.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true, desc: GN,},
                     }));
                 
                 
-                XTroid.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true,dontAddCommandList: true }, (async (message, match) => {
+                XTroid.addCMD({pattern: 'gn', fromMe: true, deleteCommand: true,dontAddCMDList: true }, (async (message, match) => {
                 
                         var r_text = new Array ();
                     
