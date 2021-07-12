@@ -14,10 +14,11 @@ let FM = Config.WORKTYPE == 'public' ? false : true
 XTroid.addCMD({pattern: 'nclub ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get('https://gist.githubusercontent.com/SLdevilX/fc63eee183153286d2bf001a9c2ba1c6/raw/').then(async (ann) => {
-        const { key1 } = ann.data.key
-        const lc = key1
-        const seed = "Config.LOCK"
-        if (lc !== seed) return await message.sendMessage(GG);
+    const { key1 } = ann.data.key
+    const lc = key1
+    const seed = "3bGFzaXlh"
+    if (lc !== seed) return await message.sendMessage(Config.GG);
+
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html",
         `${match[1]}`
