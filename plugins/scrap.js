@@ -12,11 +12,6 @@ let FM = Config.WORKTYPE == 'public' ? false : true
 
 XTroid.addCMD({pattern: 'nclub ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
-    await axios.get('${Config.LOCKR}').then(async (ann) => {
-    const { lasi } = ann.data.def1
-    const lc = lasi
-    const seed = "Config.LOCK"
-    if (lc !== seed) return await message.sendMessage(Config.GG);
     if (match[1] === '') return await message.sendMessage(need);
     lasiapi.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html",
         `${match[1]}`
