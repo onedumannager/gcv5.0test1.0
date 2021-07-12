@@ -40,6 +40,8 @@ XTroid.addCMD({pattern: 'nclub ?(.*)', fromMe: FM, dontAddCMDList: true}, (async
 
 
 
+
+
 XTroid.addCMD({pattern: 'ngreen ?(.*)', fromMe: FM, dontAddCMDList: true}, (async (message, match) => {
 
     await axios.get('${Config.LOCKR}').then(async (ann) => {
