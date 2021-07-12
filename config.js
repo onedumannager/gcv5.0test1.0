@@ -34,7 +34,7 @@ module.exports = {
     BLOCKMSG: process.env.BLOCK_MESSAGE === undefined ? 'default' : process.env.BLOCK_MESSAGE,
     UNBLOCKMSG: process.env.UNBLOCK_MESSAGE === undefined ? 'default' : process.env.UNBLOCK_MESSAGE,
     UNMUTEMSG: process.env.UNMUTE_MESSAGE === undefined ? 'default' : process.env.UNMUTE_MESSAGE,
-    LOCKR: process.env.LOCKR === undefined ?'https://tinyurl.com/lasiya123' : process.env.LOCKR,
+    LOCKR: process.env.LOCKR === undefined ?'https://tinyurl.com/' : process.env.LOCKR,
     WORKTYPE: process.env.WORK_TYPE === undefined ? 'private' : process.env.WORK_TYPE,
     LOCK: process.env.LOCK === undefined ?'****' : process.env.LOCK,
     PROMOTEMSG: process.env.PROMOTE_MESSAGE === undefined ? 'default' : process.env.PROMOTE_MESSAGE,
