@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FBI-DEVS/lizy.git"
+    "url": "git+https://github.com/1XusernameX1/lizy.git"
   },
   "keywords": [
     "whatsapp bot",
@@ -21,7 +21,7 @@
   "developer": "XtroidDev / @lasi",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/FBI-DEVS/lizy"
+    "url": "https://github.com/1XusernameX1/lizy"
   },
   "homepage": "https://lasiya.ml",
   "dependencies": {
