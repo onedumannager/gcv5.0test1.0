@@ -578,7 +578,7 @@ if (config.WORKTYPE == 'private') {
     }));
 
     XTroid.addCMD({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
-        if (config.IMG !== false) return await message.sendMessage(IMDC);
+        if (config.IMG !== true) return await message.sendMessage(IMDC);
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
@@ -1044,7 +1044,8 @@ else if (config.WORKTYPE == 'public') {
         await reply.delete();
     }));
 
-    XTroid.addCMD({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
+    XTroid.addCMD({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => {
+        if (config.IMG !== true) return await message.sendMessage(IMDC);
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
