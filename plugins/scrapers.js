@@ -153,7 +153,7 @@ XTroid.addCMD({pattern: 'cimg ?(.*)', fromMe: true, desc: IMdsc, usage: '.cimg o
         }
     }
     else if (match[1] == 'off') {
-        if (imgsw !== 'true') {
+        if (imgsw !== 'false') {
             return await message.client.sendMessage(message.jid, '*' + ALIMGOF + '*', MessageType.text)
         }
         else {
