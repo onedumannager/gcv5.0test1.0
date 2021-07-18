@@ -1,7 +1,7 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/1XusernameX1/lizy /root/lizy
-WORKDIR /root/lizy/
+RUN git clone https://github.com/ngmg2022/yugyk-nkj /root/yugyk-nkj
+WORKDIR /root/yugyk-nkj/
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
 RUN yarn install --no-audit
