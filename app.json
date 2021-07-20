@@ -34,7 +34,7 @@
         "HANDLERS": {
             "description": "Donot change!.වෙනස් නොකරන්න!!!",
             "required": true,
-            "value": "^[*.!;#]"
+            "value": "^[*.]"
         },
         "AI_LIZA": {
             "description": "Turn your account into a chatbot! (IT CAN ON OR OFF AFTR DEPLOY); ඔබගේ ගිණුම සම්පුර්ණ ලෙස කෘතීම බුද්ධියක් ලෙස ක්‍රියාකරයි මෙය පසුව ON,OFF කරගත් හැක එබැවින් මෙය මගහැරිය හැක ",
